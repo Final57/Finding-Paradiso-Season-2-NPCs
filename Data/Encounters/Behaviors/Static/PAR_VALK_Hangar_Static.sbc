@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+            
+            [UseRivalAI:true]
+
+            [SpawnConditionsProfiles:PAR_VALK_Hangar_Static_SpawnConditions]
+
+            [ManipulationProfiles:PAR_VALK_Manipulation]
+            [ManipulationProfiles:PAR_VALK_Hangar]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="">
+                <Position>
+                    <X>0.0</X>
+                    <Y>32.5</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Hangar_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+  <EntityComponents>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:100]
+            [PlanetaryInstallationType:Medium]
+    
+            [RivalAiAnySpawn:true]
+            [FactionOwner:VALK]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Passive]
+
+            [TargetData:MSB_TargetProfile_LongRange]
+
+            [UsePlayerDistanceTimer:true]
+            [PlayerDistanceTrigger:50000]
+            [PlayerDistanceTimerTrigger:30000]
+
+            [Triggers:PAR_VALK_Hangar_Static_Trigger_SpawnSetup]
+
+            [TriggerGroups:MSB_StaticCommon_TriggerGroup]
+            [TriggerGroups:MSB_System_EngagementRange_Trigger_10000]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_7500]
+            [TriggerGroups:MSB_System_Communication_TriggerGroup]
+            [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
+            [TriggerGroups:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+            
+            [Triggers:PAR_VALK_Hangar_Static_Trigger_PlaceCrew]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Trigger_SpawnSetup</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAi Trigger]
+
+            [Type:Timer]
+            [UseTrigger:true] 
+            [StartsReady:true]
+
+            [MaxActions:1] 
+            [Actions:PAR_VALK_Hangar_Static_Action_Rename]
+        </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Action_Rename</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [ChangeAntennaHudText:true]
+            [AntennaHudText:Field Hangar]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Trigger_SpawnPatrol</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAi Trigger]
+
+            [Type:Timer]
+            [UseTrigger:true] 
+            [StartsReady:true]
+
+            [MinCooldownMs:500]
+            [MaxCooldownMs:501]
+
+            [MaxActions:1] 
+            [Actions:PAR_VALK_Hangar_Static_Action_SpawnPatrol]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>MSB_System_Communication_Action_Enable_SOS_Response_Dynamic</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAi Trigger]
+
+            [Type:Timer]
+            [UseTrigger:true] 
+            [StartsReady:true]
+
+            [MinCooldownMs:500]
+            [MaxCooldownMs:501]
+
+            [MaxActions:1] 
+            [Actions:PAR_VALK_Hangar_Static_Action_SpawnPatrol]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Conditions_SpawnPatrol</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Condition]
+
+            [SpawnConditions]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Action_SpawnPatrol</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [SwitchToReceivedTarget:true]
+
+            [SpawnEncounter:PAR_VALK__Patrol]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Trigger_PlaceCrew</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Trigger]
+
+            [Type:PlayerNear]
+
+            [UseTrigger:true]
+            [StartsReady:true]
+
+            [TargetDistance:1000]
+
+            [MinCooldownMs:5000]
+            [MaxCooldownMs:5001]
+
+            [MaxActions:1]
+            [Actions:PAR_VALK_Hangar_Static_Action_PlaceCrew]
+        </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_Action_PlaceCrew</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [AddBotsToGrid:true]
+            [BotCount:6]
+
+            [OnlySpawnBotsInPressurizedRooms:true]
+
+            [BotSpawnProfileNames:PAR_VALK_BotProfile_Crew]
+        </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

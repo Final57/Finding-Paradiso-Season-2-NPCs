@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_VALK__Guard</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+            
+            [UseRivalAI:true]
+
+            [SpawnConditionsProfiles:PAR_VALK__Guard_SpawnConditions]
+
+            [ManipulationProfiles:PAR_VALK_Manipulation]
+            [ManipulationProfiles:PAR_VALK_Fighter]
+
+            [UseRandomNameGenerator:true]
+            [RenameGrid:false]
+            [ReplaceAntennaHudTextInsteadOfName:true]
+            [ReplaceAntennaNameWithRandomizedName:Antenna]
+            [RandomGridNamePattern:Expedition Guard RandomLetterRandomLetter-RandomNumber]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="">
+                <Position>
+                    <X>0.0</X>
+                    <Y>32.5</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK__Guard_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+  <EntityComponents>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK__Guard_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [RivalAiAnySpawn:true]
+            [FactionOwner:VALK]
+
+            [IgnoreCombatePhase:true]
+            [SkipAirDensityCheck:true]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK__Guard_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Patrol]
+
+            [TargetData:MSB_TargetProfile_LowRange]
+            [OverrideTargetData:MSB_TargetProfile_LongRange]
+            [AutopilotData:MSB_PatrolArea_Autopilot]
+
+            [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+            [UsePlayerDistanceTimer:true]
+            [PlayerDistanceTrigger:50000]
+            [PlayerDistanceTimerTrigger:30000]
+
+            [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+            [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+            [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+            [TriggerGroups:MSB_System_Communication_TriggerGroup]
+            [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+            [TriggerGroups:MSB_PatrolArea_TriggerGroup]
+            [TriggerGroups:MSB_Gunship_TriggerGroup]
+        </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

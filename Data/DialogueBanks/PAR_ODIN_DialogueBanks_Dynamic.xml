@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DialogueBank xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ChatProfileId>MSB_Chat_Default</ChatProfileId>
+	<DialogueCue>
+		<DialogueCueId>Scout_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Initiating scans</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Scanning area for anomalies</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Starting search pattern, will report findings shortly</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+</DialogueBank>

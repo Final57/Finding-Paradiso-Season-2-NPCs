@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK__Escort_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:Escort]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_Escort_Autopilot]
+        [SecondaryAutopilotData:MSB_Fighter_Autopilot]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_VALK_Escort_Trigger_SpawnSetup]
+
+        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+        [Triggergroups:MSB_System_CommandChain_Escort_TriggerGroup]
+
+        [TriggerGroups:MSB_Escort_TriggerGroup]
+        [TriggerGroups:MSB_Fighter_TriggerGroup]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Escort_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:PAR_VALK__Escort_Action_Rename]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK__Escort_Action_Rename</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [ChangeAntennaHudText:true]
+        [UseRandomNameGenerator:true]
+        [AntennaHudText:Expedition Patrol Escort RandomLetter-RandomNumber]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

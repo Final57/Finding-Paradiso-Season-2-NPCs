@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityComponents>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [ClearAuthorship:true]
+
+                [UseRandomNameGenerator:true]
+                [RandomGridNamePrefix:(NPC-VALK)]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation_Fighter</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseLootProfiles:true]
+                [LootProfiles:PAR_VALK_LootProfile_Fighter]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation_Outpost</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseLootProfiles:true]
+                [LootProfiles:PAR_VALK_LootProfile_Outpost]
+            </Description>
+        </EntityComponent>
+
+
+    </EntityComponents>
+</Definitions>
