@@ -15,7 +15,7 @@
 
         [TargetData:MSB_TargetProfile_LowRange]
         [OverrideTargetData:MSB_TargetProfile_LongRange]
-        [AutopilotData:MSB_Escort_Autopilot]
+        [AutopilotData:MSB_OffensiveEscort_Autopilot]
         [SecondaryAutopilotData:MSB_Fighter_Autopilot]
 
         [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
@@ -36,7 +36,7 @@
         [Triggers:MSB_System_EngagementRange_Trigger_3000]
         [Triggergroups:MSB_System_CommandChain_Escort_TriggerGroup]
 
-        [TriggerGroups:MSB_Escort_TriggerGroup]
+        [TriggerGroups:MSB_OffensiveEscort_TriggerGroup]
         [TriggerGroups:MSB_Fighter_TriggerGroup]
       </Description>
     </EntityComponent>

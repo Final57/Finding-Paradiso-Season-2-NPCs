@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_SpawnGroup</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:PAR_VALK_Lighthouse_Patrol_SpawnConditions]
+
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Expedition Force Patrol Group RandomCharRandomNumber-RandomNumber]
+        [ProcessBlocksForCustomGridName:true]
+
+        [ManipulationProfiles:PAR_VALK_Manipulation]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-VALK]Valkoran Lighthouse Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>PAR_VALK_Lighthouse_Patrol_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+
+        [SpaceCargoShip:true]
+        [LunarCargoShip:true]
+        [AtmosphericCargoShip:true]
+        [GravityCargoship:true]
+
+        [SpaceCargoShipChance:10]
+        [LunarCargoShipChance:10]
+        [AtmosphericCargoShipChance:10]
+        [GravityCargoShipChance:10]
+
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:CargoShip]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_Cargoship_Autopilot]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_VALK_Lighthouse_Patrol_Trigger_SpawnSetup]
+        [Triggers:PAR_VALK_Lighthouse_Patrol_Trigger_Escorts]
+
+        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [//TriggerGroups:MSB_System_Crash_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+        [TriggerGroups:MSB_Cargoship_TriggerGroup]
+        [TriggerGroups:MSB_Capital_TriggerGroup]
+
+        [EscortOffsets:X:150 Y:-65 Z:65]
+        [EscortOffsets:X:75 Y:-95 Z:-25]
+        [EscortOffsets:X:-100 Y:50 Z:-45]
+
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_Trigger_Escorts</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:2]
+        [Actions:PAR_VALK_Lighthouse_Patrol_Spawn_Escort_Action]
+        [Actions:PAR_VALK_Lighthouse_Patrol_Spawn_Fighters_Action]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_Spawn_Escort_Action</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SpawnEncounter:true]
+        [Spawner:PAR_VALK_Lighthouse_Escort_SpawnContainer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Patrol_Spawn_Fighters_Action</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SpawnEncounter:true]
+        [Spawner:PAR_VALK_Lighthouse_Fighters_SpawnContainer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Fighters_SpawnContainer</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:True]
+
+        [StarsReady:True]
+        [SpawnMinCooldown:30]
+        [SpwnMaxCooldown:60]
+        [MaxSpawns:1]
+
+        [SpawnGroups:PAR_VALK_FASP_Escort_SpawnGroup]
+
+        [UseRelativeSpawnPosition:False]
+        [MinDistance:300]
+        [MaxDistance:500]
+        [MinAltitude:300]
+        [MaxAltitude:600]
+        [IgnoreSafetyChecks:False]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Lighthouse_Escort_SpawnContainer</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:True]
+
+        [StarsReady:True]
+        [SpawnMinCooldown:30]
+        [SpwnMaxCooldown:60]
+        [MaxSpawns:1]
+
+        [SpawnGroups:PAR_VALK_Archer_Escort_SpawnGroup]
+        [SpawnGroups:PAR_VALK_Viator_Escort_SpawnGroup]
+        [SpawnGroups:PAR_VALK_Pathfinder_Escort_SpawnGroup]
+
+        [UseRelativeSpawnPosition:False]
+        [MinDistance:300]
+        [MaxDistance:500]
+        [MinAltitude:300]
+        [MaxAltitude:600]
+        [IgnoreSafetyChecks:False]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

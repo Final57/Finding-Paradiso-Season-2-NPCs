@@ -2,7 +2,7 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Factions>
 
-    <Faction Tag="ODIN" Founder="">
+    <Faction Tag="ODIN" Founder="ODIN">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
         <SubtypeId>PAR_ODIN_Faction</SubtypeId>
@@ -22,7 +22,7 @@
       <IconColor R="255" G="255" B="255" A="255" />
       <Description>ODIN is </Description>
     </Faction>
-    <Faction Tag="VALK" Founder="">
+    <Faction Tag="VALK" Founder="Deckard Valkor">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
         <SubtypeId>PAR_VALK_Faction</SubtypeId>
@@ -34,14 +34,15 @@
       <AutoAcceptMember>false</AutoAcceptMember>
       <DiscoveredByDefault>false</DiscoveredByDefault>
       <StartingBalance>1000000000</StartingBalance>
-      <!--<FactionIcon>Textures\FactionLogo\.dds</FactionIcon>
+      <FactionIcon>Textures\FactionLogo\Empty.dds</FactionIcon>
       <FactionIconWorkshopId>
-        <Id></Id>
+        <Id>3219757925</Id>
         <ServiceName>Steam</ServiceName>
-      </FactionIconWorkshopId>-->
+      </FactionIconWorkshopId>
       <IconColor R="255" G="255" B="255" A="255" />
       <Description>Kiith Valkor is a scattered military expedition that has been cut off from their home. They are attempting to make it home, while recovering their lost equipment or scavenging parts off of others.
-      They are outwardly ambivalent against others, but do not think twice to use force to acquire the equipment they need to get home.
+
+They are outwardly ambivalent against others, but do not think twice to use force to acquire the equipment they need to get home.
       </Description>
     </Faction>
 

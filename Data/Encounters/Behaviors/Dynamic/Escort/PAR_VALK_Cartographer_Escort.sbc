@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Cartographer_Escort_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:Escort]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_DefensiveEscort_AutoPilot]
+        [SecondaryAutopilotData:MSB_Gunship_Autopilot]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+        [TriggerGroups:MSB_System_CommandChain_Escort_TriggerGroup]
+
+        [TriggerGroups:MSB_DefensiveEscort_TriggerGroup]
+        [TriggerGroups:MSB_Gunship_TriggerGroup]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

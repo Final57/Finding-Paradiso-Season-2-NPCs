@@ -10,10 +10,11 @@
             <Description>
                 [MES Manipulation]
 
-                [ClearAuthorship:true]
-
                 [UseRandomNameGenerator:true]
                 [RandomGridNamePrefix:(NPC-VALK)]
+                [RenameGrid:true]
+
+                [ClearAuthorship:true]
             </Description>
         </EntityComponent>
 

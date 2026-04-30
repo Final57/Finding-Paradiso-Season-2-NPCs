@@ -5,12 +5,14 @@
     <SpawnGroup>
         <Id>
             <TypeId>SpawnGroupDefinition</TypeId>
-            <SubtypeId>PAR_VALK_Outpost_Static</SubtypeId>
+            <SubtypeId>PAR_VALK_Outpost_Static_SpawnGroup</SubtypeId>
         </Id>
         <Description>
             [Modular Encounters SpawnGroup]
             
-            [UseRivalAI:true]
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
 
             [SpawnConditionsProfiles:PAR_VALK_Outpost_Static_SpawnConditions]
 
@@ -18,29 +20,39 @@
             [ManipulationProfiles:PAR_VALK_Outpost]
 
             [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
 
             [UseRandomNameGenerator:true]
-            [RenameGrid:false]
-            [ReplaceAntennaHudTextInsteadOfName:true]
-            [ReplaceAntennaNameWithRandomizedName:Antenna]
             [RandomGridNamePattern:Expedition Outpost RandomLetter-RandomNumber]
+            [ProcessBlocksForCustomGridName:true]
         </Description>
         <Icon>Textures\GUI\Icons\Fake.dds</Icon>
         <IsPirate>true</IsPirate>
         <Frequency>5.0</Frequency>
         <Prefabs>
-            <Prefab SubtypeId="">
+            <Prefab SubtypeId="[MES-VALK]Valkoran Scanning Outpost">
                 <Position>
                     <X>0.0</X>
-                    <Y>32.5</Y>
+                    <Y>12.5</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
-                <Behaviour>PAR_VALK_Outpost_Behavior</Behaviour>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Base Observatory">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
             </Prefab>
         </Prefabs>
     </SpawnGroup>
   </SpawnGroups>
+
   <EntityComponents>
     
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -54,9 +66,12 @@
             [PlanetaryInstallation:true]
             [PlanetaryInstallationChance:100]
             [PlanetaryInstallationType:Medium]
+
+            [PrefabSpawningMode:Random]
     
             [RivalAiAnySpawn:true]
             [FactionOwner:VALK]
+            [RemoteControlCode:PARVALKStation]
         </Description>
     </EntityComponent>
 
@@ -76,46 +91,16 @@
             [PlayerDistanceTrigger:50000]
             [PlayerDistanceTimerTrigger:30000]
 
-            [Triggers:PAR_VALK_Outpost_Static_Trigger_SpawnSetup]
-
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
             [TriggerGroups:MSB_System_Dialogue_Dynamic]
-            [TriggerGroups:MSB_System_EngagementRange_Trigger_5000]
             [TriggerGroups:MSB_System_Defense_Trigger_Guards_4000]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
-            [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
             
             [Triggers:PAR_VALK_Outpost_Static_Trigger_PlaceCrew]
-        </Description>
-    </EntityComponent>
+            [Triggers:PAR_Trigger_CallCargoShip]
+            [Triggers:PAR_VALK_Outpost_Static_Trigger_CargoShipArrival]
 
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-        <Id>
-            <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Outpost_Static_Trigger_SpawnSetup</SubtypeId>
-        </Id>
-        <Description>
-            [RivalAi Trigger]
-
-            [Type:Timer]
-            [UseTrigger:true] 
-            [StartsReady:true]
-
-            [MaxActions:1] 
-            [Actions:PAR_VALK_Outpost_Static_Action_Rename]
-        </Description>
-    </EntityComponent>
-    
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-        <Id>
-            <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Outpost_Static_Action_Rename</SubtypeId>
-        </Id>
-        <Description>
-            [RivalAI Action]
-
-            [ChangeAntennaHudText:true]
-            [AntennaHudText:Field Outpost]
+            [RemoteControlCode:PARVALKStation]
         </Description>
     </EntityComponent>
 
@@ -147,13 +132,13 @@
             [Chance:20]
 
             [SpawnEncounter:true]
-            [Spawner:PAR_VALK_Hangar_Static_SpawnContainer]
+            [Spawner:PAR_VALK_Outpost_Static_SpawnContainer]
 
             [UseChatBroadcast:true]
             [Chat-Data:PAR_VALK_Outpost_Static_SpawnBaseExpansion_Chat]
 
-            [MinCooldownMs:10000]
-            [MaxCooldownMs:10001]
+            [MinCooldownMs:5000]
+            [MaxCooldownMs:5001]
 
             [MaxActions:1]
         </Description>
@@ -162,7 +147,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
         <Id>
             <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Hangar_Static_SpawnContainer</SubtypeId>
+            <SubtypeId>PAR_VALK_Outpost_Static_SpawnContainer</SubtypeId>
         </Id>
         <Description>
             [RivalAI Spawn]
@@ -175,7 +160,8 @@
             [IgnoreSafetyChecks:false]
 
             [MaxSpawns:3]
-            [SpawnGroups:PAR_VALK_Hangar_Static]
+            [SpawnGroups:PAR_VALK_Hangar_Static_SpawnGroup]
+            [SpawnGroups:PAR_VALK_HeavyEmplacement_Static_SpawnGroup]
 
             [MinDistance:50]
             [MaxDistance:100]
@@ -207,6 +193,7 @@
             [Actions:PAR_VALK_Outpost_Static_Action_PlaceCrew]
         </Description>
     </EntityComponent>
+
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
         <Id>
             <TypeId>Inventory</TypeId>
@@ -233,10 +220,10 @@
             [MES AI Chat]
 
             [UseChat:true]
-            [StarsReady:true]
+            [StartsReady:true]
             [MaxChats:-1]
             [BroadcastRandomly:true]
-            [Author: Kiith VALKara Outpost Manager]
+            [Author: Kiith Valkara Outpost Manager]
             [Color:Blue]
 
             [Message:Supply ship has arrived at the outpost. They may have brought reinforcements...]

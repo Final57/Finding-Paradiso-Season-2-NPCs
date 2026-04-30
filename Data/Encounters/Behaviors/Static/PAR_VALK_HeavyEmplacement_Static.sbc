@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Static_SpawnGroup</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+            
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
+
+            [SpawnConditionsProfiles:PAR_VALK_HeavyEmplacement_Static_SpawnConditions]
+
+            [ManipulationProfiles:PAR_VALK_Manipulation]
+            [ManipulationProfiles:PAR_VALK_HeavyEmplacement]
+
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
+
+            [UseRandomNameGenerator:true]
+            [RandomGridNamePattern:Expedition Emplacement RandomLetter-RandomNumber]
+            [ProcessBlocksForCustomGridName:true]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Heavy Emplacement">
+                <Position>
+                    <X>0.0</X>
+                    <Y>5.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Oswald Class Emplacement">
+                <Position>
+                    <X>0.0</X>
+                    <Y>0.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran William Class Emplacement">
+                <Position>
+                    <X>0.0</X>
+                    <Y>5.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+  <EntityComponents>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Static_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:0]
+            [PlanetaryInstallationType:Medium]
+
+            [PrefabSpawningMode:Random]
+    
+            [RivalAiAnySpawn:true]
+            [FactionOwner:VALK]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Passive]
+
+            [TargetData:MSB_TargetProfile_LongRange]
+
+            [UsePlayerDistanceTimer:true]
+            [PlayerDistanceTrigger:50000]
+            [PlayerDistanceTimerTrigger:30000]
+
+            [TriggerGroups:MSB_StaticCommon_TriggerGroup]
+            [TriggerGroups:MSB_System_Dialogue_Dynamic]
+            [TriggerGroups:MSB_System_EngagementRange_Trigger_5000]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_4000]
+            [TriggerGroups:MSB_System_Communication_TriggerGroup]
+            [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
+            
+            [Triggers:PAR_VALK_HeavyEmplacement_Trigger_PlaceCrew]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Trigger_PlaceCrew</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Trigger]
+
+            [Type:PlayerNear]
+
+            [UseTrigger:true]
+            [StartsReady:true]
+
+            [TargetDistance:1000]
+
+            [MinCooldownMs:5000]
+            [MaxCooldownMs:5001]
+
+            [MaxActions:1]
+            [Actions:PAR_VALK_HeavyEmplacement_Action_PlaceCrew]
+        </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Action_PlaceCrew</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [AddBotsToGrid:true]
+            [BotCount:6]
+
+            [OnlySpawnBotsInPressurizedRooms:true]
+
+            [BotSpawnProfileNames:PAR_VALK_BotProfile_Crew]
+        </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

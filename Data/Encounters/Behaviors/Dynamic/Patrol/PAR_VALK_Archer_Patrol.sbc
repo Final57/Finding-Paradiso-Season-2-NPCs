@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_VALK_Archer_Patrol_SpawnGroup</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:PAR_VALK_Archer_Patrol_SpawnConditions]
+
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Expedition Force Patrol RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+        [RenameGrid:true]
+        [ProcessBlocksForCustomGridName:true]
+
+        [ManipulationProfiles:PAR_VALK_Manipulation]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-VALK]Valkoran Archer Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>PAR_VALK_Archer_Patrol_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Archer_Patrol_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+        [ReplenishSystems:true]
+
+        [SpaceCargoShip:true]
+        [LunarCargoShip:true]
+        [AtmosphericCargoShip:true] 
+        [GravityCargoship:true]
+
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+
+        [SpaceCargoShipChance:75]
+        [LunarCargoShipChance:60]
+        [AtmosphericCargoShipChance:60]
+        [GravityCargoShipChance:60]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Archer_Patrol_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:Patrol]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_Patrol_Autopilot]
+        [SecondaryAutopilotData:MSB_Gunship_Autopilot]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [JumpToTarget:true]
+
+        [Triggers:PAR_VALK_Archer_Patrol_Trigger_SpawnSetup]
+
+        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+        [TriggerGroups:MSB_Patrol_TriggerGroup]
+        [TriggerGroups:MSB_Capital_TriggerGroup]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Archer_Patrol_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

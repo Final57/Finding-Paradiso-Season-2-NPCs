@@ -9,7 +9,7 @@
       </Id>
       <Description>
 
-        [MES AI Trigger]
+        [RivalAI Trigger]
 
         [UseTrigger:true]
         [Type:CommandReceived]
@@ -32,7 +32,7 @@
       </Id>
       <Description>
 
-        [MES AI Condition]
+        [RivalAI Condition]
 
         [CommandGravityCheck:true]
         [CommandGravityMatches:true]
@@ -48,7 +48,7 @@
       </Id>
       <Description>
 
-        [MES AI Action]
+        [RivalAI Action]
 
         [AddWaypointFromCommand:true]
         [UseChatBroadcast:true]
@@ -59,6 +59,8 @@
 
         [EnableTriggers:true]
         [EnableTriggerNames:PAR_Trigger_ArriveAtStation]
+
+        [ResetCooldownTimeOfTriggers:true]
       </Description>
 
     </EntityComponent>

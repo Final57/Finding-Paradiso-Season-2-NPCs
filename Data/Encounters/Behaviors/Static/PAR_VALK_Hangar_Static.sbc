@@ -5,30 +5,40 @@
     <SpawnGroup>
         <Id>
             <TypeId>SpawnGroupDefinition</TypeId>
-            <SubtypeId>PAR_VALK_Hangar_Static</SubtypeId>
+            <SubtypeId>PAR_VALK_Hangar_Static_SpawnGroup</SubtypeId>
         </Id>
         <Description>
             [Modular Encounters SpawnGroup]
             
-            [UseRivalAI:true]
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
 
             [SpawnConditionsProfiles:PAR_VALK_Hangar_Static_SpawnConditions]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
             [ManipulationProfiles:PAR_VALK_Hangar]
+
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
+
+            [UseRandomNameGenerator:true]
+            [RandomGridNamePattern:Expedition Hangar RandomLetter-RandomNumber]
+            [ProcessBlocksForCustomGridName:true]
         </Description>
         <Icon>Textures\GUI\Icons\Fake.dds</Icon>
         <IsPirate>true</IsPirate>
         <Frequency>5.0</Frequency>
         <Prefabs>
-            <Prefab SubtypeId="">
+            <Prefab SubtypeId="[MES-VALK]Valkoran Docking Spire">
                 <Position>
                     <X>0.0</X>
-                    <Y>32.5</Y>
+                    <Y>0.0</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
-                <Behaviour>PAR_VALK_Hangar_Behavior</Behaviour>
+                <Behaviour>PAR_VALK_Hangar_Static_Behavior</Behaviour>
             </Prefab>
         </Prefabs>
     </SpawnGroup>
@@ -42,11 +52,10 @@
         </Id>
         <Description>
             [MES Spawn Conditions]
-    
+
             [PlanetaryInstallation:true]
-            [PlanetaryInstallationChance:100]
-            [PlanetaryInstallationType:Medium]
-    
+            [PlanetaryInstallationChance:0]
+
             [RivalAiAnySpawn:true]
             [FactionOwner:VALK]
         </Description>
@@ -78,6 +87,7 @@
             [TriggerGroups:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
             
             [Triggers:PAR_VALK_Hangar_Static_Trigger_PlaceCrew]
+            [Triggers:PAR_VALK_Hangar_Static_Trigger_SpawnPatrol
         </Description>
     </EntityComponent>
 
@@ -94,20 +104,7 @@
             [StartsReady:true]
 
             [MaxActions:1] 
-            [Actions:PAR_VALK_Hangar_Static_Action_Rename]
-        </Description>
-    </EntityComponent>
-    
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-        <Id>
-            <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Hangar_Static_Action_Rename</SubtypeId>
-        </Id>
-        <Description>
-            [RivalAI Action]
-
-            [ChangeAntennaHudText:true]
-            [AntennaHudText:Field Hangar]
+            [Actions:]
         </Description>
     </EntityComponent>
 
@@ -123,8 +120,8 @@
             [UseTrigger:true] 
             [StartsReady:true]
 
-            [MinCooldownMs:500]
-            [MaxCooldownMs:501]
+            [MinCooldownMs:1500]
+            [MaxCooldownMs:2001]
 
             [MaxActions:1] 
             [Actions:PAR_VALK_Hangar_Static_Action_SpawnPatrol]
@@ -143,23 +140,11 @@
             [UseTrigger:true] 
             [StartsReady:true]
 
-            [MinCooldownMs:500]
-            [MaxCooldownMs:501]
+            [MinCooldownMs:1000]
+            [MaxCooldownMs:1501]
 
             [MaxActions:1] 
             [Actions:PAR_VALK_Hangar_Static_Action_SpawnPatrol]
-        </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-        <Id>
-            <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Hangar_Static_Conditions_SpawnPatrol</SubtypeId>
-        </Id>
-        <Description>
-            [RivalAI Condition]
-
-            [SpawnConditions]
         </Description>
     </EntityComponent>
 
@@ -171,11 +156,41 @@
         <Description>
             [RivalAI Action]
 
-            [SwitchToReceivedTarget:true]
+            [Chance:50]
 
-            [SpawnEncounter:PAR_VALK__Patrol]
+            [SpawnEncounter:true]
+            [Spawner:PAR_VALK_Hangar_Patrol_SpawnContainer]
         </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Hangar_Patrol_SpawnContainer</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Spawn]
+
+            [UseSpawn:True]
+
+            [StartsReady:True]
+            [SpawnMinCooldown:30]
+            [SpawnMaxCooldown:60]
+            [MaxSpawns:1]
+
+            [SpawnGroups:PAR_VALK_Archer_Patrol_SpawnGroup]
+            [SpawnGroups:PAR_VALK_Viator_Patrol_SpawnGroup]
+            [SpawnGroups:PAR_VALK_Pathfinder_Patrol_SpawnGroup]
+            [SpawnGroups:PAR_VALK_FASP_Patrol_SpawnGroup]
+
+            [UseRelativeSpawnPosition:False]
+            [MinDistance:100]
+            [MaxDistance:200]
+            [MinAltitude:100]
+            [MaxAltitude:200]
+            [IgnoreSafetyChecks:False]
+        </Description>
+    </EntityComponent>    
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
         <Id>
