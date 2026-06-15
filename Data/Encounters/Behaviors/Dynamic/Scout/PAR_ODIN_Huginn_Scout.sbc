@@ -5,7 +5,7 @@
         <SpawnGroup>
             <Id>
                 <TypeId>SpawnGroupDefinition</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawngroup</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Spawngroup</SubtypeId>
             </Id>
             <Description>
                 [Modular Encounters SpawnGroup]
@@ -13,30 +13,30 @@
                 [UseRivalAi:true]
                 [RivalAiReplaceRemoteControl:true]
 
-                [SpawnConditionsProfiles:PAR_VALK__Scout_SpawnConditions]
+                [SpawnConditionsProfiles:PAR_ODIN_Huginn_Scout_SpawnConditions]
 
-                [ManipulationProfiles:PAR_VALK_Manipulation]
-                [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+                [ManipulationProfiles:PAR_ODIN_Manipulation]
+                [ManipulationProfiles:PAR_ODIN_Manipulation_Fighter]
 
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
                 [UseRandomNameGenerator:true]
                 [RenameGrid:true]
                 [ProcessBlocksForCustomGridName:true]
-                [RandomGridNamePattern:Scout RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+                [RandomGridNamePattern:ODIN Recon Squadron OD1N-HSRandomNumberRandomNumber]
             </Description>
             <Icon>Textures\GUI\Icons\Fake.dds</Icon>
             <IsPirate>true</IsPirate>
             <Frequency>5.0</Frequency>
             <Prefabs>
-                <Prefab SubtypeId="PAR_VALK__Scout">
+                <Prefab SubtypeId="[MES-ODIN]O.D.I.N. Huginn Class">
                     <Position>
                         <X>0.0</X>
                         <Y>0.0</Y>
                         <Z>0.0</Z>
                     </Position>
-                    <Speed>50</Speed>
-                    <Behaviour>PAR_VALK__Scout_Behavior</Behaviour>
+                    <Speed>75</Speed>
+                    <Behaviour>PAR_ODIN_Huginn_Scout_Behavior</Behaviour>
                 </Prefab>
             </Prefabs>
         </SpawnGroup>
@@ -47,29 +47,20 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_SpawnConditions</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_SpawnConditions</SubtypeId>
             </Id>
             <Description>
                 [MES Spawn Conditions]
 
                 [SpaceCargoShip:true]
-                [GravityCargoShip:true]
-                [LunarCargoShip:true]
-                [AtmosphericCargoShip:true]
 
                 [RivalAiAnySpawn:true]
-                [FactionOwner:VALK]
-                [ReplenishSystems:false]
+                [FactionOwner:ODIN]
+                [ReplenishSystems:true]
 
                 [IgnoreCombatPhase:true]
-                [SkipAirDensityCheck:true]
-                [SkipVoxelSpawnChecks:true]
-                [SkipGridSpawnChecks:true]
 
                 [SpaceCargoShipChance:70]
-                [LunarCargoShipChance:70]
-                [AtmosphericCargoShipChance:70]
-                [GravityCargoShipChance:70]
 
                 [UseKnownPlayerLocations:true]
                 [KnownPlayerLocationMustMatchFaction:true]
@@ -85,7 +76,7 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Behavior</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Behavior</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Behavior]
@@ -96,20 +87,18 @@
                 [AutopilotData:MSB_Scout_Autopilot]
                 [SecondaryAutopilotData:MSB_Gunship_Autopilot]
 
-                [DialogueBanks:PAR_VALK__Scout_DialogueBank.xml]
+                [DialogueBanks:PAR_ODIN_Huginn_Scout_DialogueBank.xml]
 
                 [UsePlayerDistanceTimer:true]
                 [PlayerDistanceTrigger:50000] 
                 [PlayerDistanceTimerTrigger:30000]
 
-                [Triggers:PAR_VALK__Scout_Trigger_SpawnSpaceRelay]
-                [Triggers:PAR_VALK__Scout_Trigger_SpawnGravityRelay]
+                [Triggers:PAR_ODIN_Huginn_Scout_Trigger_SpawnSpaceRelay]
 
                 [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 
                 [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
                 [TriggerGroups:MSB_System_Communication_TriggerGroup]
-                [//TriggerGroups:MSB_System_Crash_TriggerGroup]
 
                 [TriggerGroups:MSB_Gunship_TriggerGroup]
                 [TriggerGroups:MSB_Scout_TriggerGroup]
@@ -120,7 +109,7 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_SpawnSpaceRelay</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Trigger_SpawnSpaceRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Trigger]
@@ -131,25 +120,25 @@
                 [UseTrigger:true]
                 [StartsReady:true]
                 [MaxActions:1]
-                [Actions:PAR_VALK__Scout_Action_SpawnSpaceRelay]
+                [Actions:PAR_ODIN_Huginn_Scout_Action_SpawnSpaceRelay]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Action_SpawnSpaceRelay</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Action_SpawnSpaceRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Action]
 
                 [SpawnEncounter:true]
-                [Spawner:PAR_VALK__Scout_Spawn_SpawnSpaceRelay]
+                [Spawner:PAR_ODIN_Huginn_Scout_Spawn_SpawnSpaceRelay]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawn_SpawnSpaceRelay</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Spawn_SpawnSpaceRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Spawn]
@@ -162,7 +151,7 @@
                 [IgnoreSafetyChecks:false]
 
                 [MaxSpawns:1]
-                [SpawnGroups:PAR_VALK_CommunicationsSatellite_Relay_SpawnGroup]
+                [SpawnGroups:PAR_ODIN_CommunicationsSatellite_Relay_SpawnGroup]
 
                 [MinDistance:5000]
                 [MaxDistance:7500]
@@ -172,63 +161,7 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_SpawnGravityRelay</SubtypeId>
-            </Id>
-            <Description>
-                [RivalAI Trigger]
-
-                [Type:Manual]
-                [Tags:MSB_TriggerEvent_Scout_SpawnRelay_Gravity]
-
-                [UseTrigger:true]
-                [StartsReady:true]
-
-                [MaxActions:1]
-                [Actions:PAR_VALK__Scout_Action_SpawnGravityRelay]
-            </Description>
-        </EntityComponent>
-        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-            <Id>
-                <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Action_SpawnGravityRelay</SubtypeId>
-            </Id>
-            <Description>
-                [RivalAI Action]
-
-                [SpawnEncounter:true]
-                [Spawner:PAR_VALK__Scout_Spawn_SpawnGravityRelay]
-            </Description>
-        </EntityComponent>
-        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-            <Id>
-                <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawn_SpawnGravityRelay</SubtypeId>
-            </Id>
-            <Description>
-                [RivalAI Spawn]
-
-                [UseSpawn:true]
-                [StartsReady:true]
-
-                [SpawningType:PlanetaryInstallation]
-                [UseRelativeSpawnPosition:false]
-                [IgnoreSafetyChecks:false]
-
-                [MaxSpawns:1]
-                [SpawnGroups:PAR_VALK_CommunicationsRelay_SpawnGroup]
-
-                [MinDistance:5000]
-                [MaxDistance:10000]
-
-                [MinAltitude:0]
-                [MaxAltitude:1]
-            </Description>
-        </EntityComponent>
-
-        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-            <Id>
-                <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_PlaceCrew</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Trigger_PlaceCrew</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Trigger]
@@ -244,13 +177,13 @@
                 [MaxCooldownMs:5001]
 
                 [MaxActions:1]
-                [Actions:PAR_VALK__Scout_Action_PlaceCrew]
+                [Actions:PAR_ODIN_Huginn_Scout_Action_PlaceCrew]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Action_PlaceCrew</SubtypeId>
+                <SubtypeId>PAR_ODIN_Huginn_Scout_Action_PlaceCrew</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Action]
@@ -260,7 +193,7 @@
 
                 [OnlySpawnBotsInPressurizedRooms:true]
 
-                [BotSpawnProfileNames:PAR_VALK_BotProfile_Crew]
+                [BotSpawnProfileNames:PAR_ODIN_BotProfile_Crew]
             </Description>
         </EntityComponent>
 

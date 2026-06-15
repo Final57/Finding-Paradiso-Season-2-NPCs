@@ -10,16 +10,16 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Expedition Force Patrol RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+        [RenameGrid:true]
+        [ProcessBlocksForCustomGridName:true]
+
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:PAR_VALK_Cartographer_Patrol_SpawnConditions]
-
-        [UseRandomNameGenerator:true]
-        [RandomGridNamePattern:Expedition Force Patrol RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
-        [RenameGrid:true]
-        [ProcessBlocksForCustomGridName:true]
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
         [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
@@ -64,6 +64,7 @@
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
+        [MaxGravity:0.5]
 
         [SpaceCargoShipChance:75]
         [LunarCargoShipChance:60]

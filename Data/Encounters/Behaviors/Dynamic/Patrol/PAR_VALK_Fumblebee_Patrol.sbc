@@ -5,58 +5,48 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_SpawnGroup</SubtypeId>
+        <SubtypeId>PAR_VALK_Fumblebee_Patrol</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ReplenishSystems:true]
-        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
-
-        [UseRandomNameGenerator:true]
-        [RenameGrid:true]
-        [RandomGridNamePattern:Expedition CAP RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
-        [ProcessBlocksForCustomGridName:true]
-
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
 
-        [SpawnConditionsProfiles:PAR_VALK_FASP_Patrol_SpawnConditions]
+        [ReplenishSystems:true]
+        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
+
+        [SpawnConditionsProfiles:PAR_VALK_Fumblebee_Patrol_SpawnConditions]
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
-        [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
-        [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+        [ManipulationProfiles:PAR_VALK_Manipulation_AtmoGunship]
+
+        [UseRandomNameGenerator:true]
+        [RenameGrid:true]
+        [RandomGridNamePattern:Expedition Patrol RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+        [ProcessBlocksForCustomGridName:true]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
+        <Prefab SubtypeId="[MES-VALK]Valkoran Fumblebee Class">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Patrol_Behavior</Behaviour>
+          <Speed>55</Speed>
+          <Behaviour>PAR_VALK_Fumblebee_Patrol_Behavior</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
+        <Prefab SubtypeId="[MES-VALK]Valkoran Fumblebee Class">
           <Position>
             <X>50.0</X>
             <Y>-25.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Escort_Behavior</Behaviour>
-        </Prefab>
-         <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
-          <Position>
-            <X>-50.0</X>
-            <Y>-25.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Escort_Behavior</Behaviour>
+          <Speed>55</Speed>
+          <Behaviour>PAR_VALK_Fumblebee_Patrol_Behavior</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -67,14 +57,21 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_SpawnConditions</SubtypeId>
+        <SubtypeId>PAR_VALK_Fumblebee_Patrol_SpawnConditions</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
 
-        [RivalAiSpawn:true]
         [RivalAiAnySpawn:true]
         [FactionOwner:VALK]
+
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [IgnoreCombatePhase:true]
+
+        [MinGravity:0.5]
+
+        [CustomPathStartAltitude:100]
 
         [SkipVoxelSpawnChecks:true]
         [SkipGridSpawnChecks:true]
@@ -86,7 +83,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_Behavior</SubtypeId>
+        <SubtypeId>PAR_VALK_Fumblebee_Patrol_Behavior</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
@@ -96,7 +93,6 @@
         [TargetData:MSB_TargetProfile_LowRange]
         [OverrideTargetData:MSB_TargetProfile_LongRange]
         [AutopilotData:MSB_PatrolArea_Autopilot]
-        [SecondaryAutopilotData:MSB_Fighter_Autopilot]
 
         [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
 
@@ -104,31 +100,27 @@
         [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
 
-        [Triggers:PAR_VALK_FASP_Patrol_Trigger_SpawnSetup]
+        [Triggers:PAR_VALK_Fumblebee_Patrol_Trigger_SpawnSetup]
 
         [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
-        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
 
         [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToStatic]
         [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
         [TriggerGroups:MSB_System_Communication_TriggerGroup]
         [Triggers:MSB_System_EngagementRange_Trigger_3000]
 
         [TriggerGroups:MSB_PatrolArea_TriggerGroup]
         [TriggerGroups:MSB_Fighter_TriggerGroup]
-
-        [EscortOffsets:X:50 Y:-25 Z:0]
-        [EscortOffsets:X:-50 Y:-25 Z:0]
-
       </Description>
     </EntityComponent>
     
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_Trigger_SpawnSetup</SubtypeId>
+        <SubtypeId>PAR_VALK_Fumblebee_Patrol_Trigger_SpawnSetup</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <SpawnGroups>
+
+        <SpawnGroup>
+            <Id>
+                <TypeId>SpawnGroupDefinition</TypeId>
+                <SubtypeId>PAR_ODIN_CommunicationsSatellite_Relay_SpawnGroup</SubtypeId>
+            </Id>
+            <Description>
+                [Modular Encounters SpawnGroup]
+
+                [UseRivalAi:true]
+                [RivalAiReplaceRemoteControl:true]
+
+                [SpawnConditionsProfiles:PAR_ODIN_CommunicationsSatellite_Relay_SpawnConditions]
+
+                [ManipulationProfiles:PAR_ODIN_Manipulation]
+                [ManipulationProfiles:PAR_ODIN_Manipulation_Fighter]
+
+                [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+
+                [UseRandomNameGenerator:true]
+                [RenameGrid:true]
+                [ProcessBlocksForCustomGridName:true]
+                [RandomGridNamePattern:ODIN Satellite OD1N-STRandomNumberRandomNumber]
+            </Description>
+            <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+            <IsPirate>true</IsPirate>
+            <Frequency>5.0</Frequency>
+            <Prefabs>
+                <Prefab SubtypeId="[MES-ODIN]O.D.I.N. Beacon Satellite">
+                    <Position>
+                        <X>0.0</X>
+                        <Y>0.0</Y>
+                        <Z>0.0</Z>
+                    </Position>
+                    <Speed>0</Speed>
+                    <Behaviour>PAR_ODIN_CommunicationsSatellite_Behavior</Behaviour>
+                </Prefab>
+            </Prefabs>
+        </SpawnGroup>
+
+    </SpawnGroups>
+    <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_CommunicationsSatellite_Relay_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [StaticEncounter:true]
+
+        [RivalAiSpaceSpawn:true]
+        [FactionOwner:ODIN]
+        [ReplenishSystems:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_CommunicationsSatellite_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+	      [BehaviorName:Passive]
+
+        [TriggerGroups:MSB_Relay_TriggerGroup]
+
+      </Description>
+    </EntityComponent>
+
+    </EntityComponents>
+</Definitions>

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_VALK_Fumblebee_Guard</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+            
+            [UseRivalAI:true]
+
+            [UseRandomNameGenerator:true]
+            [RenameGrid:true]
+            [RandomGridNamePattern:Expedition Guard RandomLetterRandomLetter-RandomNumber]
+            [ProcessBlocksForCustomGridName:true]
+
+            [SpawnConditionsProfiles:PAR_VALK_Fumblebee_Guard_SpawnConditions]
+
+            [ManipulationProfiles:PAR_VALK_Manipulation]
+            [ManipulationProfiles:PAR_VALK_Manipulation_AtmoGunship]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Fumblebee Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>0.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Fumblebee_Guard_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+  <EntityComponents>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Fumblebee_Guard_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [IgnoreCombatePhase:true]
+
+        [MinGravity:0.5]
+
+        [CustomPathStartAltitude:100]
+
+        [SkipVoxelSpawnChecks:true]
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Fumblebee_Guard_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Patrol]
+
+            [TargetData:MSB_TargetProfile_LowRange]
+            [OverrideTargetData:MSB_TargetProfile_LongRange]
+            [AutopilotData:MSB_PatrolArea_Autopilot]
+
+            [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+            [UsePlayerDistanceTimer:true]
+            [PlayerDistanceTrigger:50000]
+            [PlayerDistanceTimerTrigger:30000]
+
+            [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+            [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+            [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+            [TriggerGroups:MSB_System_Communication_TriggerGroup]
+            [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+            [TriggerGroups:MSB_PatrolArea_TriggerGroup]
+            [TriggerGroups:MSB_Fighter_TriggerGroup]
+        </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

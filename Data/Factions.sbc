@@ -22,6 +22,7 @@
       <IconColor R="255" G="255" B="255" A="255" />
       <Description>ODIN is </Description>
     </Faction>
+
     <Faction Tag="VALK" Founder="Deckard Valkor">
       <Id>
         <TypeId>MyObjectBuilder_FactionDefinition</TypeId>

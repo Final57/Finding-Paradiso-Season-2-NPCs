@@ -1,82 +1,59 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SpawnGroups>
-
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_SpawnGroup</SubtypeId>
+        <SubtypeId>PAR_ODIN_Fenrir_Escort_SpawnGroup</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ReplenishSystems:true]
-        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
-
-        [UseRandomNameGenerator:true]
-        [RenameGrid:true]
-        [RandomGridNamePattern:Expedition CAP RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
-        [ProcessBlocksForCustomGridName:true]
-
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
+        [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:PAR_VALK_FASP_Patrol_SpawnConditions]
+        [SpawnConditionsProfiles:PAR_ODIN_Fenrir_Escort_SpawnConditions]
 
-        [ManipulationProfiles:PAR_VALK_Manipulation]
-        [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:ODIN Fleet Escort OD1N-FSRandomNumberRandomNumber]
+        [ProcessBlocksForCustomGridName:true]
+
+        [ManipulationProfiles:PAR_ODIN_Manipulation]
+        [ManipulationProfiles:PAR_ODIN_Manipulation_Fighter]
         [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
+        <Prefab SubtypeId="[MES-ODIN]O.D.I.N. Fenrir Class">
           <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
           </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Patrol_Behavior</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
-          <Position>
-            <X>50.0</X>
-            <Y>-25.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Escort_Behavior</Behaviour>
-        </Prefab>
-         <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
-          <Position>
-            <X>-50.0</X>
-            <Y>-25.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>75</Speed>
-          <Behaviour>PAR_VALK_FASP_Escort_Behavior</Behaviour>
+          <Speed>25</Speed>
+          <Behaviour>PAR_ODIN_Fenrir_Escort_Behavior</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-
   </SpawnGroups>
+
   <EntityComponents>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_SpawnConditions</SubtypeId>
+        <SubtypeId>PAR_ODIN_Fenrir_Escort_SpawnConditions</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
 
-        [RivalAiSpawn:true]
         [RivalAiAnySpawn:true]
-        [FactionOwner:VALK]
+        [FactionOwner:ODIN]
 
-        [SkipVoxelSpawnChecks:true]
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
@@ -86,49 +63,45 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_Behavior</SubtypeId>
+        <SubtypeId>PAR_ODIN_Fenrir_Escort_Behavior</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
 
-        [BehaviorName:Patrol]
+        [BehaviorName:Escort]
 
         [TargetData:MSB_TargetProfile_LowRange]
         [OverrideTargetData:MSB_TargetProfile_LongRange]
-        [AutopilotData:MSB_PatrolArea_Autopilot]
-        [SecondaryAutopilotData:MSB_Fighter_Autopilot]
+        [AutopilotData:PAR_ODIN_Autopilot_DefensiveEscort]
+        [SecondaryAutopilotData:MSB_Cargoship_Autopilot]
 
-        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+        [DialogueBanks:PAR_ODIN_DialogueBank_Dynamic.xml]
+
+        [Triggers:PAR_ODIN_Fenrir_Escort_Trigger_SpawnSetup]
 
         [UsePlayerDistanceTimer:true]
         [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
 
-        [Triggers:PAR_VALK_FASP_Patrol_Trigger_SpawnSetup]
-
         [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
-        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
 
         [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
         [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
         [TriggerGroups:MSB_System_Communication_TriggerGroup]
-        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+        [Triggers:MSB_System_EngagementRange_Trigger_5000]
+        [TriggerGroups:MSB_System_CommandChain_Escort_TriggerGroup]
 
-        [TriggerGroups:MSB_PatrolArea_TriggerGroup]
-        [TriggerGroups:MSB_Fighter_TriggerGroup]
-
-        [EscortOffsets:X:50 Y:-25 Z:0]
-        [EscortOffsets:X:-50 Y:-25 Z:0]
-
+        [TriggerGroups:MSB_DefensiveEscort_TriggerGroup]
+        [TriggerGroups:MSB_Capital_TriggerGroup]
       </Description>
     </EntityComponent>
-    
+
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_VALK_FASP_Patrol_Trigger_SpawnSetup</SubtypeId>
+        <SubtypeId>PAR_ODIN_Fenrir_Escort_Trigger_SpawnSetup</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
@@ -138,7 +111,7 @@
         [UseTrigger:true]
         [StartsReady:true]
 
-        [MaxActions:1]
+        [MaxActions:2]
         [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
       </Description>
     </EntityComponent>

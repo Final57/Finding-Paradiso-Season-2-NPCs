@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Autopilot_DefensiveEscort</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:150]
+        [FlyLevelWithGravity:false]
+        [WaypointTolerance:50]
+        [UseVelocityCollisionEvasion:true]
+        [WaypointWaitTimeTrigger:20]
+
+        [IdealMinSpeed:35]
+        [IdealMaxSpeed:110]
+        [MaxSpeedTolerance:25]
+        [AngleAllowedForForwardThrust:5]
+
+        [LimitRotationSpeed:false]
+
+        [EscortSpeedMatchMinDistance:25]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

@@ -15,6 +15,8 @@
             [ReplenishSystems:true]
 
             [SpawnConditionsProfiles:PAR_VALK_HeavyEmplacement_Static_SpawnConditions]
+            [SpawnConditionsProfiles:PAR_VALK_HeavyEmplacement_Static_SpawnConditions_Planetary]
+            [UseFirstConditionsAsPersistent:True]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
             [ManipulationProfiles:PAR_VALK_HeavyEmplacement]
@@ -34,7 +36,7 @@
             <Prefab SubtypeId="[MES-VALK]Valkoran Heavy Emplacement">
                 <Position>
                     <X>0.0</X>
-                    <Y>5.0</Y>
+                    <Y>8.0</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
@@ -43,7 +45,7 @@
             <Prefab SubtypeId="[MES-VALK]Valkoran Oswald Class Emplacement">
                 <Position>
                     <X>0.0</X>
-                    <Y>0.0</Y>
+                    <Y>8.0</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
@@ -52,7 +54,7 @@
             <Prefab SubtypeId="[MES-VALK]Valkoran William Class Emplacement">
                 <Position>
                     <X>0.0</X>
-                    <Y>5.0</Y>
+                    <Y>8.0</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
@@ -70,15 +72,25 @@
         </Id>
         <Description>
             [MES Spawn Conditions]
-    
-            [PlanetaryInstallation:true]
-            [PlanetaryInstallationChance:0]
-            [PlanetaryInstallationType:Medium]
-
+            [RivalAiSpawn:true]
             [PrefabSpawningMode:Random]
-    
             [RivalAiAnySpawn:true]
             [FactionOwner:VALK]
+            [ForceStaticGrid:true]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_HeavyEmplacement_Static_SpawnConditions_Planetary</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:1]
+            [PlanetaryInstallationType:Medium]
         </Description>
     </EntityComponent>
 
@@ -101,7 +113,7 @@
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
             [TriggerGroups:MSB_System_Dialogue_Dynamic]
             [TriggerGroups:MSB_System_EngagementRange_Trigger_5000]
-            [TriggerGroups:MSB_System_Defense_Trigger_Guards_4000]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_7500]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
             [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
             

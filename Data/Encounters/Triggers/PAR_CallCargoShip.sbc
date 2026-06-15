@@ -5,20 +5,52 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Action_CallForStations</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:PAR_Command_CallForStations]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Command_CallForStations</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:PAR_Command_CallForStations]
+        [SingleRecipient:true]
+        [MatchSenderReceiverOwners:true]
+
+        [IgnoreAntennaRequirement:true]
+        [IgnoreReceiverAntennaRequirement:true]
+        [Radius:10000]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>PAR_Trigger_CallCargoShip</SubtypeId>
       </Id>
       <Description>
 
         [RivalAI Trigger]
 
-        [UseTrigger:true]
-        [Type:Timer]
+        [Type:CommandReceived]
+        [CommandReceiveCode:PAR_Command_CallForStations]
 
-        [MinCooldownMs:300]
-        [MaxCooldownMs:9000]
+        [UseTrigger:true]
         [StartsReady:true]
 
-        [MaxActions:-1]
         [Actions:PAR_Action_CallCargoShip]
 
       </Description>
@@ -31,12 +63,10 @@
         <SubtypeId>PAR_Action_CallCargoShip</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Action]
 
         [BroadcastCommandProfiles:true]
         [CommandProfileIds:PAR_Command_CallCargoShip]
-
       </Description>
 
     </EntityComponent>
@@ -50,34 +80,18 @@
 
         [RivalAI Command]
 
+        [DebugMessage:Deviate to station - Sending code]
+
         [CommandCode:PAR_DeviateToStation]
         [SingleRecipient:true]
-        [SendWaypoint:true]
         [MatchSenderReceiverOwners:true]
-        [Waypoint:PAR_Waypoint_CallCargoShip]
-        [IgnoreReceiverAntennaRequirement:true]
+
+        [SendWaypoint:true]
+        [Waypoint:PAR_VALK_Outpost_Static_Waypoint_CallCargoShip]
+
         [IgnoreAntennaRequirement:true]
+        [IgnoreReceiverAntennaRequirement:true]
         [Radius:10000]
-
-      </Description>
-
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Waypoint_CallCargoShip</SubtypeId>
-      </Id>
-      <Description>
-
-        [RivalAI Waypoint]
-        
-        [Waypoint:EntityRandom]
-        [RelativeEntity:Self]
-        [MinDistance:50]
-        [MaxDistance:75]
-        [MinAltitude:50]
-        [MaxAltitude:75]
 
       </Description>
 

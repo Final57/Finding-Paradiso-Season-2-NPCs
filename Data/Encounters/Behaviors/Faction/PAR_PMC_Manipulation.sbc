@@ -5,13 +5,13 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_Manipulation</SubtypeId>
+                <SubtypeId>PAR_PMC_Manipulation</SubtypeId>
             </Id>
             <Description>
                 [MES Manipulation]
 
                 [UseRandomNameGenerator:true]
-                [RandomGridNamePrefix:(NPC-VALK)]
+                [RandomGridNamePrefix:(NPC-PMC)]
                 [RenameGrid:true]
 
                 [ClearAuthorship:true]
@@ -21,39 +21,56 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_Manipulation_Fighter</SubtypeId>
+                <SubtypeId>PAR_PMC_Manipulation_Hover_Rover</SubtypeId>
             </Id>
             <Description>
                 [MES Manipulation]
 
-                [UseLootProfiles:true]
-                [LootProfiles:PAR_VALK_LootProfile_Fighter]
+                [UseBlockReplacerProfile:true]
+                [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
+                [RestrictNpcAtmoThrust:true]
+
+                [ConfigureSpecialNpcThrusters:true]
+                [NpcAtmoThrustForceMultiply:1]
             </Description>
         </EntityComponent>
 
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_Manipulation_Outpost</SubtypeId>
+                <SubtypeId>PAR_PMC_Manipulation_Fighter</SubtypeId>
             </Id>
             <Description>
                 [MES Manipulation]
 
                 [UseLootProfiles:true]
-                [LootProfiles:PAR_VALK_LootProfile_Outpost]
+                [LootProfiles:PAR_PMC_LootProfile_Fighter]
             </Description>
         </EntityComponent>
 
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_Manipulation_AtmoGunship</SubtypeId>
+                <SubtypeId>PAR_PMC_Manipulation_Outpost</SubtypeId>
             </Id>
             <Description>
                 [MES Manipulation]
 
                 [UseLootProfiles:true]
-                [LootProfiles:PAR_VALK_LootProfile_Fighter]
+                [LootProfiles:PAR_PMC_LootProfile_Outpost]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMC_Manipulation_AtmoGunship</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseLootProfiles:true]
+                [LootProfiles:PAR_PMC_LootProfile_Fighter]
 
                 [UseBlockReplacerProfile:true]
                 [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Replenishment_Light_Guns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Replenishment]
+
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/NATO_25x184mm]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AutocannonClip]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AWE85mmAmmoBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AWE135mmFlakBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/40mmATLASBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/54mmAutocannonBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/25mmCODEXBP]
+
+        [MaxItemAmount:100]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Replenishment_Light_Missiles</SubtypeId>
+      </Id>
+      <Description>
+        [MES Replenishment]
+
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/Missile200mm]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/84FlechetteMissileBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AWEShrikeBombBP]
+
+        [MaxItemAmount:10]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Replenishment_Light_Railguns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Replenishment]
+
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/SmallRailgunAmmo]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/GaussAmmoBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AryxSmallRailgunAmmoBP]
+
+        [MaxItemAmount:10]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Replenishment_Light_Artillery</SubtypeId>
+      </Id>
+      <Description>
+        [MES Replenishment]
+
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AWEWhirlwind120AmmoBP]
+        [MaxItemId:MyObjectBuilder_AmmoMagazine/AWECyclone480AmmoBP]
+
+        [MaxItemAmount:10]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

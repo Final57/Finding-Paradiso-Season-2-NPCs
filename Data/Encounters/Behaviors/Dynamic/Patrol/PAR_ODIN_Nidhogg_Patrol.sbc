@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_SpawnGroup</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:PAR_ODIN_Nidhogg_Patrol_SpawnConditions]
+
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Fleet Patrol OD1N-FNRandomNumber]
+        [ProcessBlocksForCustomGridName:true]
+
+        [ManipulationProfiles:PAR_ODIN_Manipulation]
+        [ManipulationProfiles:PAR_ODIN_Manipulation_Fighter]
+        [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-ODIN]O.D.I.N. Nidhogg Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>75</Speed>
+          <Behaviour>PAR_ODIN_Nidhogg_Patrol_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:ODIN]
+
+        [SpaceCargoShip:true]
+
+        [SpaceCargoShipChance:5]
+
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:CargoShip]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_Cargoship_Autopilot]
+
+        [DialogueBanks:PAR_ODIN_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_ODIN_Nidhogg_Patrol_Trigger_SpawnSetup]
+        [Triggers:PAR_ODIN_Nidhogg_Patrol_Trigger_Escorts]
+
+        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_5000]
+
+        [TriggerGroups:MSB_Cargoship_TriggerGroup]
+        [TriggerGroups:MSB_Capital_TriggerGroup]
+
+        [EscortOffsets:X:150 Y:-165 Z:165]
+        [EscortOffsets:X:175 Y:-195 Z:-125]
+        [EscortOffsets:X:-100 Y:150 Z:-145]
+
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_Trigger_Escorts</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:2]
+        [Actions:PAR_ODIN_Nidhogg_Patrol_Spawn_Escort_Action]
+        [Actions:PAR_ODIN_Nidhogg_Patrol_Spawn_Fighters_Action]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_Spawn_Escort_Action</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SpawnEncounter:true]
+        [Spawner:PAR_ODIN_Nidhogg_Escort_SpawnContainer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Patrol_Spawn_Fighters_Action</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SpawnEncounter:true]
+        [Spawner:PAR_ODIN_Nidhogg_Fighters_SpawnContainer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Fighters_SpawnContainer</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:True]
+
+        [StarsReady:True]
+        [SpawnMinCooldown:30]
+        [SpwnMaxCooldown:60]
+        [MaxSpawns:1]
+
+        [SpawnGroups:PAR_ODIN_Muninn_Escort_SpawnGroup]
+        [SpawnGroups:PAR_ODIN_Huginn_Escort_SpawnGroup]
+
+        [UseRelativeSpawnPosition:False]
+        [MinDistance:300]
+        [MaxDistance:500]
+        [MinAltitude:300]
+        [MaxAltitude:600]
+        [IgnoreSafetyChecks:False]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_ODIN_Nidhogg_Escort_SpawnContainer</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:True]
+
+        [StarsReady:True]
+        [SpawnMinCooldown:30]
+        [SpwnMaxCooldown:60]
+        [MaxSpawns:1]
+
+        [SpawnGroups:PAR_ODIN_Ratatoskr_Escort_SpawnGroup]
+        [SpawnGroups:PAR_ODIN_Fenrir_Escort_SpawnGroup]
+
+        [UseRelativeSpawnPosition:False]
+        [MinDistance:300]
+        [MaxDistance:500]
+        [MinAltitude:300]
+        [MaxAltitude:600]
+        [IgnoreSafetyChecks:False]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

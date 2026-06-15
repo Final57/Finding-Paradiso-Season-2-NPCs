@@ -12,10 +12,12 @@
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
         [ReplenishSystems:true]
+        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
 
         [SpawnConditionsProfiles:PAR_VALK_FASP_Escort_SpawnConditions]
 
         [UseRandomNameGenerator:true]
+        [RenameGrid:true]
         [RandomGridNamePattern:Expedition Force CAP Escort RandomChar-RandomNumber]
         [ProcessBlocksForCustomGridName:true]
 
@@ -82,7 +84,7 @@
         [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
 
-        [Triggers:PAR_VALK_Escort_Trigger_SpawnSetup]
+        [Triggers:PAR_VALK_FASP_Escort_Trigger_SpawnSetup]
 
         [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
@@ -94,7 +96,6 @@
         [Triggers:MSB_System_EngagementRange_Trigger_3000]
         [Triggergroups:MSB_System_CommandChain_Escort_TriggerGroup]
 
-        [TriggerGroups:MSB_DefensiveEscort_TriggerGroup]
         [TriggerGroups:MSB_OffensiveEscort_TriggerGroup]
         [TriggerGroups:MSB_Fighter_TriggerGroup]
       </Description>
