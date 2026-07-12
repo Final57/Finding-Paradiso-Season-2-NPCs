@@ -111,7 +111,7 @@
         [UseTrigger:true]
         [StartsReady:true]
 
-        [MaxActions:2]
+        [MaxActions:1]
         [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
         [Actions:PAR_ODIN_Huginn_Escort_Action_SpawnSetup]
       </Description>

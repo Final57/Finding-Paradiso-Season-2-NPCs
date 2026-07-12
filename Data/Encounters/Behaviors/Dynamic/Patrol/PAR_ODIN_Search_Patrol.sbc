@@ -67,7 +67,7 @@
         [SpaceCargoShip:true]
         [PrefabSpawningMode:Random]
 
-        [SpaceCargoShipChance:10]
+        [SpaceCargoShipChance:12]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
@@ -148,7 +148,10 @@
         [UseTrigger:true]
         [StartsReady:true]
 
-        [MaxActions:2]
+        [MinCooldownMs:90000]
+        [MaxCooldownMs:150000]
+
+        [MaxActions:1]
         [Actions:PAR_ODIN_Search_Patrol_Spawn_Escort_Action]
       </Description>
     </EntityComponent>
@@ -176,12 +179,13 @@
 
         [UseSpawn:True]
 
-        [StarsReady:True]
+        [StartsReady:True]
         [SpawnMinCooldown:30]
-        [SpwnMaxCooldown:60]
+        [SpawnMaxCooldown:60]
         [MaxSpawns:1]
 
-        [SpawnGroups:PAR_ODIN_Ratatoskr_Escort_SpawnGroup]
+        [SpawnGroups:PAR_ODIN_Muninn_Escort_SpawnGroup]
+        [SpawnGroups:PAR_ODIN_Huginn_Escort_SpawnGroup]
 
         [UseRelativeSpawnPosition:False]
         [MinDistance:300]

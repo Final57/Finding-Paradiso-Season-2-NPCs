@@ -89,8 +89,8 @@
         [AutopilotData:MSB_Cargoship_Autopilot]
         [SecondaryAutopilotData:PAR_VALK_Wayfinder_AutoPilot_CargoShipDelivery]
 
-        [UsePlayerDisanceTimer:true]
-        [PlayerDistanceTimerMax:50000]
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
         
         [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
@@ -209,11 +209,12 @@
 
         [UseTrigger:true]
         [Type:Timer]
+        [StartsReady:true]
 
         [MinCooldownMs:30000]
         [MaxCooldownMs:180000]
 
-        [MaxActions:1]
+        [MaxActions:-1]
         [Actions:PAR_Action_CallForStations]
       </Description>
 
@@ -231,8 +232,8 @@
         [UseTrigger:true]
         [Type:BehaviorTriggerA]
 
-        [StartsReady:true]
-        [MaxActions:1]
+        [StartsReady:false]
+        [MaxActions:-1]
         [Actions:PAR_Action_ArriveAtStation]
       </Description>
     </EntityComponent>
@@ -248,6 +249,9 @@
 
         [UseChatBroadcast:true]
         [ChatData:PAR_Chat_ArriveAtStation]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:PAR_Trigger_ArriveAtStation]
 
         [BroadcastCommandProfiles:true]
         [CommandProfileIds:PAR_Command_ArriveAtStation]

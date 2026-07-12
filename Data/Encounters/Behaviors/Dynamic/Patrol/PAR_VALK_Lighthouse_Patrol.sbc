@@ -60,10 +60,10 @@
         [AtmosphericCargoShip:true]
         [GravityCargoship:true]
 
-        [SpaceCargoShipChance:10]
-        [LunarCargoShipChance:10]
-        [AtmosphericCargoShipChance:10]
-        [GravityCargoShipChance:10]
+        [SpaceCargoShipChance:8]
+        [LunarCargoShipChance:8]
+        [AtmosphericCargoShipChance:8]
+        [GravityCargoShipChance:8]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
@@ -188,9 +188,9 @@
 
         [UseSpawn:True]
 
-        [StarsReady:True]
+        [StartsReady:True]
         [SpawnMinCooldown:30]
-        [SpwnMaxCooldown:60]
+        [SpawnMaxCooldown:60]
         [MaxSpawns:1]
 
         [SpawnGroups:PAR_VALK_FASP_Escort_SpawnGroup]
@@ -214,9 +214,9 @@
 
         [UseSpawn:True]
 
-        [StarsReady:True]
+        [StartsReady:True]
         [SpawnMinCooldown:30]
-        [SpwnMaxCooldown:60]
+        [SpawnMaxCooldown:60]
         [MaxSpawns:1]
 
         [SpawnGroups:PAR_VALK_Archer_Escort_SpawnGroup]

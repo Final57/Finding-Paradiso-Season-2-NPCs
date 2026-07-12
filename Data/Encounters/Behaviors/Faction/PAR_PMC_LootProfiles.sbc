@@ -5,12 +5,12 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_LootProfile_Fighter</SubtypeId>
+                <SubtypeId>PAR_PMC_LootProfile_Fighter</SubtypeId>
             </Id>
             <Description>
                 [MES Loot]
 
-                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockSmallContainer] 
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockSmallContainer]
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockMediumContainer]
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockModularContainer]
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockLargeContainer]
@@ -22,14 +22,14 @@
                 [ContainerTypes:PAR_ContainerTypes_Ammo_Gunship]
 
                 [MinBlocks:1]
-                [MaxBlocks:3]
+                [MaxBlocks:2]
             </Description>
         </EntityComponent>
 
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK_LootProfile_Outpost</SubtypeId>
+                <SubtypeId>PAR_PMC_LootProfile_Outpost</SubtypeId>
             </Id>
             <Description>
                 [MES Loot]
@@ -46,7 +46,7 @@
                 [ContainerTypes:PAR_ContainerTypes_Ammo_Gunship]
 
                 [MinBlocks:2]
-                [MaxBlocks:5]
+                [MaxBlocks:4]
             </Description>
         </EntityComponent>
 

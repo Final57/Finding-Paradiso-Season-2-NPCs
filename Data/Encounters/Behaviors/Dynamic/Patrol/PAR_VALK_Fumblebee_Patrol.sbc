@@ -67,7 +67,7 @@
 
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
-        [IgnoreCombatePhase:true]
+        [IgnoreCombatPhase:true]
 
         [MinGravity:0.5]
 

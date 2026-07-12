@@ -51,6 +51,9 @@
         [UseTrigger:true]
         [StartsReady:true]
 
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:60000]
+
         [Actions:PAR_Action_CallCargoShip]
 
       </Description>

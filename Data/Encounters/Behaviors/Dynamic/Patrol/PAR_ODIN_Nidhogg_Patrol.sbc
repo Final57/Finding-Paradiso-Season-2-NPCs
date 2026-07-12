@@ -57,7 +57,7 @@
 
         [SpaceCargoShip:true]
 
-        [SpaceCargoShipChance:5]
+        [SpaceCargoShipChance:3]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
@@ -139,7 +139,10 @@
         [UseTrigger:true]
         [StartsReady:true]
 
-        [MaxActions:2]
+        [MinCooldownMs:120000]
+        [MaxCooldownMs:180000]
+
+        [MaxActions:1]
         [Actions:PAR_ODIN_Nidhogg_Patrol_Spawn_Escort_Action]
         [Actions:PAR_ODIN_Nidhogg_Patrol_Spawn_Fighters_Action]
       </Description>
@@ -181,9 +184,9 @@
 
         [UseSpawn:True]
 
-        [StarsReady:True]
-        [SpawnMinCooldown:30]
-        [SpwnMaxCooldown:60]
+        [StartsReady:True]
+        [SpawnMinCooldown:45]
+        [SpawnMaxCooldown:90]
         [MaxSpawns:1]
 
         [SpawnGroups:PAR_ODIN_Muninn_Escort_SpawnGroup]
@@ -208,9 +211,9 @@
 
         [UseSpawn:True]
 
-        [StarsReady:True]
-        [SpawnMinCooldown:30]
-        [SpwnMaxCooldown:60]
+        [StartsReady:True]
+        [SpawnMinCooldown:90]
+        [SpawnMaxCooldown:180]
         [MaxSpawns:1]
 
         [SpawnGroups:PAR_ODIN_Ratatoskr_Escort_SpawnGroup]

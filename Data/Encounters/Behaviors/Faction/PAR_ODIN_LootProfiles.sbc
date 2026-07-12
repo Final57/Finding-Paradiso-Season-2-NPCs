@@ -19,10 +19,10 @@
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
 
-                [ContainerTypes:]
+                [ContainerTypes:PAR_ContainerTypes_Ammo_Gunship]
 
-                [MinBlocks:1]
-                [MaxBlocks:3]
+                [MinBlocks:2]
+                [MaxBlocks:4]
             </Description>
         </EntityComponent>
 

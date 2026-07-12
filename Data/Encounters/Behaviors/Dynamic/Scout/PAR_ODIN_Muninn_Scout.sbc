@@ -90,8 +90,8 @@
                 [DialogueBanks:PAR_ODIN_Muninn_Scout_DialogueBank.xml]
 
                 [UsePlayerDistanceTimer:true]
-                [PlayerDistanceTrigger:50000] 
-                [PlayerDistanceTimerTrigger:30000]
+                [PlayerDistanceTrigger:10000] 
+                [PlayerDistanceTimerTrigger:4000]
 
                 [Triggers:PAR_ODIN_Muninn_Scout_Trigger_SpawnSpaceRelay]
 
