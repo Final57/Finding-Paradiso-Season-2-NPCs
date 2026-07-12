@@ -5,17 +5,17 @@
 		<DialogueCueId>Scout_InitRole</DialogueCueId>
 		<Entries>
 			<Entry>
-				<Message>Initiating scans</Message>
+				<Message>Initiating long-range sweep for salvage signatures.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Scanning area for anomalies</Message>
+				<Message>Scanning area for hulls, caches, and anomalies.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Starting search pattern, will report findings shortly</Message>
+				<Message>Starting search pattern, we need every spare part we can find.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
@@ -25,12 +25,12 @@
 		<DialogueCueId>IdleSounds</DialogueCueId>
 		<Entries>
 			<Entry>
-				<Message>Now where did I leave that ship?</Message>
+				<Message>Keep eyes up. If it flies, we can strip it.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Gaalsiens am I rite?</Message>
+				<Message>Another day, another broken convoy.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
@@ -40,17 +40,17 @@
 		<DialogueCueId>Patrol_InitRole</DialogueCueId>
 		<Entries>
 			<Entry>
-				<Message>Target down. Returning to route.</Message>
+				<Message>Contact down. Back to route.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Setting course for next waypoint.</Message>
+				<Message>Setting course for next waypoint, keep the cargo intact.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Flying to next waypoint.</Message>
+				<Message>Flying to next waypoint. Home is still far from here.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>

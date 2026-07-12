@@ -5,17 +5,47 @@
 		<DialogueCueId>Scout_InitRole</DialogueCueId>
 		<Entries>
 			<Entry>
-				<Message>Initiating scans</Message>
+				<Message>ODIN recon initiating sensor sweep.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Scanning area for anomalies</Message>
+				<Message>Scanning sector grid for priority contacts.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Starting search pattern, will report findings shortly</Message>
+				<Message>Search pattern underway. Report follows.</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>IdleSounds</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Hold formation. Stay dark.</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Command link stable. Awaiting tasking.</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Patrol_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Route acknowledged. Resuming patrol vector.</Message>
+				<AudioId/>
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Target neutralized. Returning to assigned corridor.</Message>
 				<AudioId/>
 				<Weights>1</Weights>
 			</Entry>

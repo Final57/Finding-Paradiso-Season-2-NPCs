@@ -163,7 +163,7 @@
                 [IgnoreSafetyChecks:false]
 
                 [MaxSpawns:1]
-                [SpawnGroups:PAR_VALK_CommunicationsRelay_SpawnGroup]
+                [SpawnGroups:PAR_VALK_Outpost_Static_SpawnGroup]
 
                 [MinDistance:5000]
                 [MaxDistance:10000]

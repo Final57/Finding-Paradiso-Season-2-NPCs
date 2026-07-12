@@ -19,8 +19,8 @@
                 [CanUseSeats:true]
                 [CanDamageGrids:true]
 
-                [BotDisplayName:VALK Crew Member]
-                [Color:{X:63 Y:214 Z:234}]
+                [BotDisplayName:VALK Expedition Crew]
+                [Color:{X:255 Y:180 Z:90}]
             </Description>
         </EntityComponent>
 

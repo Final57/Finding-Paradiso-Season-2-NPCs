@@ -94,7 +94,7 @@
         [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
         [TriggerGroups:MSB_System_Communication_TriggerGroup]
         [Triggers:MSB_System_EngagementRange_Trigger_3000]
-        [Triggergroups:MSB_System_CommandChain_Escort_TriggerGroup]
+        [TriggerGroups:MSB_System_CommandChain_Escort_TriggerGroup]
 
         [TriggerGroups:MSB_OffensiveEscort_TriggerGroup]
         [TriggerGroups:MSB_Fighter_TriggerGroup]

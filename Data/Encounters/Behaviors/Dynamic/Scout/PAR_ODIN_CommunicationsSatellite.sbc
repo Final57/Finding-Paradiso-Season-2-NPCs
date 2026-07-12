@@ -53,6 +53,7 @@
         [MES Spawn Conditions]
 
         [StaticEncounter:true]
+        [MaxGravity:0]
 
         [RivalAiSpaceSpawn:true]
         [FactionOwner:ODIN]
@@ -71,7 +72,6 @@
 	      [BehaviorName:Passive]
 
         [TriggerGroups:MSB_Relay_TriggerGroup]
-
       </Description>
     </EntityComponent>
 

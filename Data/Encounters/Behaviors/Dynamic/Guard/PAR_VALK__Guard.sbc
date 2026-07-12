@@ -52,7 +52,7 @@
             [RivalAiAnySpawn:true]
             [FactionOwner:VALK]
 
-            [IgnoreCombatePhase:true]
+            [IgnoreCombatPhase:true]
             [SkipAirDensityCheck:true]
         </Description>
     </EntityComponent>

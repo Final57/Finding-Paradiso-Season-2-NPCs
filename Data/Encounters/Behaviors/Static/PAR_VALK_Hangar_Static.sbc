@@ -19,7 +19,7 @@
             [UseFirstConditionsAsPersistent:True]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
-            [ManipulationProfiles:PAR_VALK_Hangar]
+            [ManipulationProfiles:PAR_VALK_Manipulation_Outpost]
 
             [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
             [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]

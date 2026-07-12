@@ -17,7 +17,7 @@
             [SpawnConditionsProfiles:PAR_VALK_Outpost_Static_SpawnConditions]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
-            [ManipulationProfiles:PAR_VALK_Outpost]
+            [ManipulationProfiles:PAR_VALK_Manipulation_Outpost]
 
             [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
             [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]
@@ -93,8 +93,9 @@
 
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
             [TriggerGroups:MSB_System_Dialogue_Dynamic]
-            [TriggerGroups:MSB_System_Defense_Trigger_Guards_7500]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_5000]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
+            [TriggerGroups:MSB_System_AreaRestriction_TriggerGroup_5000]
             
             [Triggers:PAR_VALK_Outpost_Static_Trigger_PlaceCrew]
             [Triggers:PAR_Trigger_CallCargoShip]
@@ -116,18 +117,17 @@
             [Type:CommandReceived]
             [CommandReceiveCode:PAR_ArriveAtStation]
 
-            [MinCooldownMs:5000]
-            [MaxCooldownMs:6000]
+            [MinCooldownMs:30000]
+            [MaxCooldownMs:45000]
 
             [UseElseActions:true]
             [ElseActions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansionFailed]
 
-            [ActionExecution:Random]
+            [ActionExecution:All]
 
-            [MaxActions:-1]
+            [MaxActions:2]
             [Actions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansion]
             [Actions:PAR_VALK_Outpost_Static_Action_SpawnPatrol]
-            [Actions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansionFailed]
         </Description>
     </EntityComponent>
 
@@ -142,7 +142,7 @@
             [UseChatBroadcast:true]
             [ChatData:PAR_VALK_Outpost_Static_SpawnBaseExpansionFailed_Chat]
 
-            [MaxActions:-1]
+            [MaxActions:2]
         </Description>
     </EntityComponent>
 
@@ -157,7 +157,7 @@
             [SpawnEncounter:true]
             [Spawner:PAR_VALK_Outpost_Static_SpawnPatrolContainer]
 
-            [MaxActions:-1]
+            [MaxActions:3]
         </Description>
     </EntityComponent>
 
