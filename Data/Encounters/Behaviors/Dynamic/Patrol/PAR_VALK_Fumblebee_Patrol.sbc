@@ -5,7 +5,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>PAR_VALK_Fumblebee_Patrol</SubtypeId>
+        <SubtypeId>PAR_VALK_Fumblebee_Patrol_SpawnGroup</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -14,7 +14,7 @@
         [RivalAiReplaceRemoteControl:true]
 
         [ReplenishSystems:true]
-        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
+        [ReplenishProfiles:PAR_VALK_Replenishment_Light_Guns]
 
         [SpawnConditionsProfiles:PAR_VALK_Fumblebee_Patrol_SpawnConditions]
 
@@ -69,13 +69,15 @@
         [GravityCargoShip:true]
         [IgnoreCombatPhase:true]
 
+        [AtmosphericCargoShipChance:70]
+        [GravityCargoShipChance:70]
+
         [MinGravity:0.5]
 
         [CustomPathStartAltitude:100]
 
         [SkipVoxelSpawnChecks:true]
         [SkipGridSpawnChecks:true]
-        [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
       </Description>
     </EntityComponent>
@@ -92,7 +94,7 @@
 
         [TargetData:MSB_TargetProfile_LowRange]
         [OverrideTargetData:MSB_TargetProfile_LongRange]
-        [AutopilotData:MSB_PatrolArea_Autopilot]
+        [AutopilotData:PAR_VALK_Autopilot_Helicopter]
 
         [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
 

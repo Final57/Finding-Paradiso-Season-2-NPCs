@@ -57,7 +57,7 @@
 
         [SpaceCargoShip:true]
 
-        [SpaceCargoShipChance:3]
+        [SpaceCargoShipChance:40]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
@@ -79,7 +79,7 @@
         [OverrideTargetData:MSB_TargetProfile_LongRange]
         [AutopilotData:MSB_Cargoship_Autopilot]
 
-        [DialogueBanks:PAR_ODIN_DialogueBank_Dynamic.xml]
+        [DialogueBanks:PAR_ODIN_DialogueBanks_Dynamic.xml]
 
         [UsePlayerDistanceTimer:true]
         [PlayerDistanceTrigger:50000]
@@ -192,12 +192,12 @@
         [SpawnGroups:PAR_ODIN_Muninn_Escort_SpawnGroup]
         [SpawnGroups:PAR_ODIN_Huginn_Escort_SpawnGroup]
 
-        [UseRelativeSpawnPosition:False]
+        [UseRelativeSpawnPosition:false]
         [MinDistance:300]
         [MaxDistance:500]
         [MinAltitude:300]
         [MaxAltitude:600]
-        [IgnoreSafetyChecks:False]
+        [IgnoreSafetyChecks:false]
       </Description>
     </EntityComponent>
 
@@ -219,12 +219,12 @@
         [SpawnGroups:PAR_ODIN_Ratatoskr_Escort_SpawnGroup]
         [SpawnGroups:PAR_ODIN_Fenrir_Escort_SpawnGroup]
 
-        [UseRelativeSpawnPosition:False]
+        [UseRelativeSpawnPosition:false]
         [MinDistance:300]
         [MaxDistance:500]
         [MinAltitude:300]
         [MaxAltitude:600]
-        [IgnoreSafetyChecks:False]
+        [IgnoreSafetyChecks:false]
       </Description>
     </EntityComponent>
 

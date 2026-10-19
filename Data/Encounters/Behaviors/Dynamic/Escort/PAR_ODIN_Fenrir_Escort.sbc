@@ -75,7 +75,7 @@
         [AutopilotData:PAR_ODIN_Autopilot_DefensiveEscort]
         [SecondaryAutopilotData:MSB_Cargoship_Autopilot]
 
-        [DialogueBanks:PAR_ODIN_DialogueBank_Dynamic.xml]
+        [DialogueBanks:PAR_ODIN_DialogueBanks_Dynamic.xml]
 
         [Triggers:PAR_ODIN_Fenrir_Escort_Trigger_SpawnSetup]
 

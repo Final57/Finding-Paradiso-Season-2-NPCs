@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Autopilot_Rover</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [UseVerticalRetreat:false]
+        
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:3]
+        [CollisionEvasionResumeDistance:3]
+
+        [HoverPathStepDistance:6]
+
+        [UseSurfaceHoverThrustMode:true]
+        [IdealPlanetAltitude:3]
+        [AltitudeTolerance:4]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:20]
+
+        [AllowStrafing:false]
+
+        [IdealMinSpeed:15]
+        [IdealMaxSpeed:25]
+        [MaxSpeedTolerance:3]
+
+        [WaypointWaitTimeTrigger:1]
+        [WaypointAbandonTimeTrigger:5]
+        
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.8]
+        [AngleAllowedForForwardThrust:60]
+
+        [WaypointTolerance:3]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

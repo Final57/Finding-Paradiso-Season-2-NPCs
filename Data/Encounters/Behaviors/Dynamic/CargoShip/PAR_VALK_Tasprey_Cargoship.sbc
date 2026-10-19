@@ -1,0 +1,151 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <SpawnGroups>
+
+      <SpawnGroup>
+        <Id>
+          <TypeId>SpawnGroupDefinition</TypeId>
+          <SubtypeId>PAR_VALK_Tasprey_Cargoship_SpawnGroup</SubtypeId>
+        </Id>
+        <Description>
+          [Modular Encounters SpawnGroup]
+
+          [UseRivalAi:true]
+          [RivalAiReplaceRemoteControl:true]
+          [UseRemoteControlCodeRestrictions:true]
+          [RemoteControlCode:PARVALKStation]
+          [RemoteControlCodeMaxDistance:25000]
+
+          [SpawnConditionsProfiles:PAR_VALK_Tasprey_SpawnConditions_CargoShip]
+
+          [ManipulationProfiles:PAR_VALK_Manipulation]
+          [ManipulationProfiles:PAR_VALK_Manipulation_Freighter]
+          
+          [ReplenishSystems:true]
+          
+          [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+          [ManipulationProfiles:MSB_Manipulation_WearAndTear_Medium_Chance]
+
+          [UseRandomNameGenerator:true]
+          [RandomGridNamePattern:Expedition Light Air Transport RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+          [ProcessBlocksForCustomGridName:true]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+          <Prefab SubtypeId="[MES-VALK]Valkoran Tasprey Class">
+            <Position>
+              <X>0.0</X>
+              <Y>0.0</Y>
+              <Z>0.0</Z>
+            </Position>
+            <Speed>30</Speed>
+            <Behaviour>PAR_VALK_Tasprey_Behavior_CargoShip</Behaviour>
+          </Prefab>
+          <Prefab SubtypeId="[MES-VALK]Valkoran Festrel Class">
+            <Position>
+              <X>25</X>
+              <Y>-20</Y>
+              <Z>0</Z>
+            </Position>
+            <Speed>30</Speed>
+            <Behaviour>PAR_VALK_Festrel_Escort_Behavior</Behaviour>
+          </Prefab>
+        </Prefabs>
+      </SpawnGroup>
+
+  </SpawnGroups>
+
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Tasprey_SpawnConditions_CargoShip</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+
+        [AtmosphericCargoShip:true]
+
+        [CustomPathStartAltitude:75]
+
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+
+        [AtmosphericCargoShipChance:80]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Tasprey_Behavior_CargoShip</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:CargoShip]
+
+        [AutopilotData:PAR_VALK_Autopilot_Helicopter]
+        [SecondaryAutopilotData:PAR_VALK_Autopilot_Helicopter_Delivery]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+        
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_Freighter_TriggerGroup]
+        [TriggerGroups:MSB_Cargoship_TriggerGroup]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
+        
+        [Triggers:PAR_VALK_Trigger_Tasprey_Cargoship_SpawnSetup]
+        [TriggerGroups:PAR_TriggerGroup_DeliverToStation]
+
+        [EscortOffsets:X:25 Y:-20 Z:0]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Trigger_Tasprey_Cargoship_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:PAR_Action_Tasprey_Cargoship_SpawnSetup]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Action_Tasprey_Cargoship_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeAntennaRanges:true]
+        [AntennaRangeChangeType:Set]
+        [AntennaRangeChangeAmount:12500]
+        [AntennaNamesForRangeChange:]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

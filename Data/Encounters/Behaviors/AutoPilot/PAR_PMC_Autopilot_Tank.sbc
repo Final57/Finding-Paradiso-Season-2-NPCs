@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Autopilot_Tank</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [UseVerticalRetreat:false]
+        
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointCalculatedAwayFromEntity:true]
+
+        [HoverPathStepDistance:7]
+
+        [UseSurfaceHoverThrustMode:true]
+        [IdealPlanetAltitude:3]
+        [AltitudeTolerance:4]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:15]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:500]
+        [StrafeMaxDurationMs:1500]
+        [StrafeSpeedCutOff:15]
+
+        [EngageDistancePlanet:1500]
+        [DisengageDistancePlanet:4500]
+
+        [IdealMinSpeed:15]
+        [IdealMaxSpeed:25]
+        [MaxSpeedTolerance:3]
+
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.8]
+        [AngleAllowedForForwardThrust:75]
+
+        [WaypointWaitTimeTrigger:3]
+        [WaypointAbandonTimeTrigger:5]
+
+        [WaypointTolerance:5]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

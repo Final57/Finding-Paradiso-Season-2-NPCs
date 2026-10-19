@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Autopilot_Helicopter_Delivery</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [LevelWithGravityWhenIdle:true]
+        [UseVerticalRetreat:false]
+
+        [MaxAngleForLeveledAscent:15]
+        [MinAngleForLeveledDescent:15]
+        
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:40]
+        [CollisionEvasionResumeDistance:20]
+
+        [HoverPathStepDistance:50]
+
+        [UseSurfaceHoverThrustMode:true]
+        [IdealPlanetAltitude:70]
+        [AltitudeTolerance:5]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+
+        [AllowStrafing:false]
+
+        [IdealMinSpeed:3]
+        [IdealMaxSpeed:10]
+        [MaxSpeedTolerance:3]
+
+        [WaypointWaitTimeTrigger:5]
+        [WaypointAbandonTimeTrigger:15]
+        
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:2]
+        [AngleAllowedForForwardThrust:30]
+
+        [WaypointTolerance:10]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

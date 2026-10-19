@@ -58,21 +58,20 @@
 
         [RivalAiAnySpawn:true]
         [FactionOwner:VALK]
-        [ReplenishSystems:true]
 
         [SpaceCargoShip:true]
         [LunarCargoShip:true]
         [AtmosphericCargoShip:true]
-        [GravityCargoship:true]
+        [GravityCargoShip:true]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
 
-        [SpaceCargoShipChance:80]
-        [LunarCargoShipChance:80]
-        [AtmosphericCargoShipChance:80]
-        [GravityCargoShipChance:80]
+        [SpaceCargoShipChance:65]
+        [LunarCargoShipChance:75]
+        [AtmosphericCargoShipChance:55]
+        [GravityCargoShipChance:65]
       </Description>
     </EntityComponent>
 
@@ -98,11 +97,10 @@
         [TriggerGroups:MSB_Cargoship_TriggerGroup]
         [TriggerGroups:MSB_System_Communication_TriggerGroup]
         [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
         
         [Triggers:PAR_VALK_Trigger_Wayfinder_Cargoship_SpawnSetup]
-        [Triggers:PAR_Trigger_CallForStations]
-        [Triggers:PAR_Trigger_DeviateToStation]
-        [Triggers:PAR_Trigger_ArriveAtStation]
+        [TriggerGroups:PAR_TriggerGroup_DeliverToStation]
       </Description>
     </EntityComponent>
 
@@ -113,7 +111,7 @@
       </Id>
       <Description>
 
-        [MES AI Trigger]
+        [RivalAI Trigger]
 
         [UseTrigger:true]
         [Type:Timer]
@@ -131,38 +129,12 @@
       </Id>
       <Description>
 
-        [MES AI Action]
+        [RivalAI Action]
 
         [ChangeAntennaRanges:true]
+        [AntennaNamesForRangeChange:]
         [AntennaRangeChangeType:Set]
         [AntennaRangeChangeAmount:12500]
-      </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Chat_DeviateToStation</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Chat]
-
-        [UseChat:true]
-        [StartsReady:true]
-        [MaxChats:1]
-        [BroadcastRandomly:true]
-        [Author:VALK Transport Pilot]
-        [Color:Blue]
-
-        [ChatMessages:Re-routing to station. Keep an eye out for any hostiles in the area.]
-        [ChatAudio:ArcHudGPSNotification1]
-        [BroadcastChatType:Chat]
-
-        [ChatMessages:Outpost upgrade en-route. Hold position and await further instructions.]
-        [ChatAudio:ArcHudGPSNotification1]
-        [BroadcastChatType:Chat]
-
       </Description>
     </EntityComponent>
 
@@ -194,113 +166,6 @@
         [MaxAngleForLeveledAscent:90]
 
         [UseVelocityCollisionEvasion:false]
-
-      </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Trigger_CallForStations</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Trigger]
-
-        [UseTrigger:true]
-        [Type:Timer]
-        [StartsReady:true]
-
-        [MinCooldownMs:30000]
-        [MaxCooldownMs:180000]
-
-        [MaxActions:-1]
-        [Actions:PAR_Action_CallForStations]
-      </Description>
-
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Trigger_ArriveAtStation</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Trigger]
-
-        [UseTrigger:true]
-        [Type:BehaviorTriggerA]
-
-        [StartsReady:false]
-        [MaxActions:-1]
-        [Actions:PAR_Action_ArriveAtStation]
-      </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Action_ArriveAtStation</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Action]
-
-        [UseChatBroadcast:true]
-        [ChatData:PAR_Chat_ArriveAtStation]
-
-        [DisableTriggers:true]
-        [DisableTriggerNames:PAR_Trigger_ArriveAtStation]
-
-        [BroadcastCommandProfiles:true]
-        [CommandProfileIds:PAR_Command_ArriveAtStation]
-
-      </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Command_ArriveAtStation</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Command]
-
-        [CommandCode:PAR_ArriveAtStation]
-        [SingleRecipient:true]
-        [MatchSenderReceiverOwners:true]
-
-        [IgnoreAntennaRequirement:true]
-        [IgnoreReceiverAntennaRequirement:true]
-        [Radius:1000]
-      </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>PAR_Chat_ArriveAtStation</SubtypeId>
-      </Id>
-      <Description>
-
-        [MES AI Chat]
-
-        [UseChat:true]
-        [StartsReady:true]
-        [MaxChats:1]
-        [BroadcastRandomly:true]
-        [Author:VALK Transport Pilot]
-        [Color:Blue]
-
-        [ChatMessages:Station, we have arrived. Beginning unrep.]
-        [ChatAudio:ArcHudGPSNotification1]
-        [BroadcastChatType:Chat]
-
-        [ChatMessages:Postition locked, initiating cargo transfer.]
-        [ChatAudio:ArcHudGPSNotification1]
-        [BroadcastChatType:Chat]
 
       </Description>
     </EntityComponent>

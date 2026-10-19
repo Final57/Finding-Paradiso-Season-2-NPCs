@@ -10,7 +10,7 @@
         <Description>
             [Modular Encounters SpawnGroup]
             
-            [UseRivalAI:true]
+            [UseRivalAi:true]
 
             [UseRandomNameGenerator:true]
             [RenameGrid:true]
@@ -61,7 +61,6 @@
 
         [SkipVoxelSpawnChecks:true]
         [SkipGridSpawnChecks:true]
-        [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
         </Description>
     </EntityComponent>

@@ -18,6 +18,8 @@
                 [ManipulationProfiles:PAR_ODIN_Manipulation]
                 [ManipulationProfiles:PAR_ODIN_Manipulation_Fighter]
 
+                [ReplenishSystems:true]
+
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
                 [UseRandomNameGenerator:true]
@@ -57,7 +59,7 @@
 
         [RivalAiSpaceSpawn:true]
         [FactionOwner:ODIN]
-        [ReplenishSystems:true]
+
       </Description>
     </EntityComponent>
 

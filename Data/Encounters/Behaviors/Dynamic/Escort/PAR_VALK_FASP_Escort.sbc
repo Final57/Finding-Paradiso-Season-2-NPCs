@@ -12,7 +12,7 @@
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
         [ReplenishSystems:true]
-        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
+        [ReplenishProfiles:PAR_VALK_Replenishment_Light_Guns]
 
         [SpawnConditionsProfiles:PAR_VALK_FASP_Escort_SpawnConditions]
 
@@ -22,9 +22,9 @@
         [ProcessBlocksForCustomGridName:true]
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Hydrogen]
         [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
         [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
-
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
       <IsPirate>true</IsPirate>
@@ -58,7 +58,12 @@
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
-        [SkipAirDensityCheck:true]
+        [SkipAirDensityCheck:false]
+
+        [AtmosphericCargoShip:false]
+        [SpaceCargoShip:true]
+        [LunarCargoShip:false]
+        [GravityCargoShip:false]
       </Description>
     </EntityComponent>
 
@@ -85,8 +90,6 @@
         [PlayerDistanceTimerTrigger:30000]
 
         [Triggers:PAR_VALK_FASP_Escort_Trigger_SpawnSetup]
-
-        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 

@@ -20,6 +20,8 @@
 
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
+                [ReplenishSystems:false]
+
                 [UseRandomNameGenerator:true]
                 [RenameGrid:true]
                 [ProcessBlocksForCustomGridName:true]
@@ -59,7 +61,6 @@
 
                 [RivalAiAnySpawn:true]
                 [FactionOwner:VALK]
-                [ReplenishSystems:false]
 
                 [IgnoreCombatPhase:true]
                 [SkipAirDensityCheck:true]
@@ -96,7 +97,7 @@
                 [AutopilotData:MSB_Scout_Autopilot]
                 [SecondaryAutopilotData:MSB_Gunship_Autopilot]
 
-                [DialogueBanks:PAR_VALK__Scout_DialogueBank.xml]
+                [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
 
                 [UsePlayerDistanceTimer:true]
                 [PlayerDistanceTrigger:50000] 

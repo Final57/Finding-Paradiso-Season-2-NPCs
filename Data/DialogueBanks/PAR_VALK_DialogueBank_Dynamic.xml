@@ -1,26 +1,6 @@
-<?xml version="1.0" encoding="utf-16"?>
-<DialogueBank xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version='1.0' encoding='utf-8'?>
+<DialogueBank>
 	<ChatProfileId>MSB_Chat_Default</ChatProfileId>
-	<DialogueCue>
-		<DialogueCueId>Scout_InitRole</DialogueCueId>
-		<Entries>
-			<Entry>
-				<Message>Initiating long-range sweep for salvage signatures.</Message>
-				<AudioId/>
-				<Weights>1</Weights>
-			</Entry>
-			<Entry>
-				<Message>Scanning area for hulls, caches, and anomalies.</Message>
-				<AudioId/>
-				<Weights>1</Weights>
-			</Entry>
-			<Entry>
-				<Message>Starting search pattern, we need every spare part we can find.</Message>
-				<AudioId/>
-				<Weights>1</Weights>
-			</Entry>
-		</Entries>
-	</DialogueCue>
 	<DialogueCue>
 		<DialogueCueId>IdleSounds</DialogueCueId>
 		<Entries>
@@ -37,21 +17,1471 @@
 		</Entries>
 	</DialogueCue>
 	<DialogueCue>
+		<DialogueCueId>EnemyDestroyed</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have word that the hostile contact is destroyed; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The hostile contact is destroyed; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerHelp</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Good, bad, or both, the hostile contact fell with allied help. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the hostile contact fell with allied help, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the hostile contact fell with allied help. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the hostile contact fell with allied help; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The hostile contact fell with allied help; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerMadeFinalShot</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The allied final shot ended the hostile contact -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the allied final shot ended the hostile contact. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the allied final shot ended the hostile contact. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the allied final shot ended the hostile contact. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the allied final shot ended the hostile contact, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>DamageByFriendlyOrNeutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted. Friendly or neutral fire struck our hull; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: friendly or neutral fire struck our hull. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFire</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If hostile weapons are engaging us, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but hostile weapons are engaging us. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that hostile weapons are engaging us; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. Hostile weapons are engaging us; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Hostile weapons are engaging us; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireHealthLow</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Keep the watch up: hull integrity has fallen to a critical level. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: hull integrity has fallen to a critical level. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, hull integrity has fallen to a critical level. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If hull integrity has fallen to a critical level, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but hull integrity has fallen to a critical level. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireGoingDown</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The vessel is going down under fire; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The vessel is going down under fire. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The vessel is going down under fire -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the vessel is going down under fire. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the vessel is going down under fire. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>I would rather hear better news, but our position has been compromised. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that our position has been compromised; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. Our position has been compromised; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Our position has been compromised; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Our position has been compromised. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the convoy log: the operation is complete and withdrawal is beginning. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the operation is complete and withdrawal is beginning. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the operation is complete and withdrawal is beginning, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the operation is complete and withdrawal is beginning. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the operation is complete and withdrawal is beginning; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn_PrepareForLanding</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The landing preparations are underway. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing preparations are underway -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the landing preparations are underway. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the landing preparations are underway. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the landing preparations are underway. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn_LandingTimeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have word that the landing window has expired; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The landing window has expired; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing window has expired; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing window has expired. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing window has expired -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Friendly</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Good, bad, or both, a friendly vessel is within range. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a friendly vessel is within range, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but a friendly vessel is within range. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that a friendly vessel is within range; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. A friendly vessel is within range; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Neutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A neutral vessel is within range -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: a neutral vessel is within range. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: a neutral vessel is within range. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, a neutral vessel is within range. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a neutral vessel is within range, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted. The all-clear is being transmitted; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear is being transmitted; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear is being transmitted. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear is being transmitted -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the all-clear is being transmitted. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the all-clear has been received, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the all-clear has been received. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the all-clear has been received; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The all-clear has been received; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear has been received; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Keep the watch up: a distress signal is being transmitted. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: a distress signal is being transmitted. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, a distress signal is being transmitted. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a distress signal is being transmitted, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but a distress signal is being transmitted. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A distress signal has been received; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A distress signal has been received. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A distress signal has been received -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: a distress signal has been received. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: a distress signal has been received. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>SOS_Response_Timeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>I would rather hear better news, but the distress response window has expired. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the distress response window has expired; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The distress response window has expired; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The distress response window has expired; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The distress response window has expired. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the convoy log: a compromise report has been received. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, a compromise report has been received. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a compromise report has been received, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but a compromise report has been received. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that a compromise report has been received; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>AreaRestriction_Warning</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A restricted area warning is active. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A restricted area warning is active -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: a restricted area warning is active. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: a restricted area warning is active. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, a restricted area warning is active. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>ShipLanding</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have word that the ship is beginning its landing approach; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The ship is beginning its landing approach; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The ship is beginning its landing approach; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The ship is beginning its landing approach. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The ship is beginning its landing approach -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Cargoship_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Good, bad, or both, the cargo ship assignment is beginning. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the cargo ship assignment is beginning, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the cargo ship assignment is beginning. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the cargo ship assignment is beginning; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The cargo ship assignment is beginning; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
 		<DialogueCueId>Patrol_InitRole</DialogueCueId>
 		<Entries>
 			<Entry>
-				<Message>Contact down. Back to route.</Message>
-				<AudioId/>
+				<Message>The patrol assignment is beginning -- now protect the route and the people behind us.</Message>
+				<AudioId />
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Setting course for next waypoint, keep the cargo intact.</Message>
-				<AudioId/>
+				<Message>Keep the watch up: the patrol assignment is beginning. Nobody gets left behind.</Message>
+				<AudioId />
 				<Weights>1</Weights>
 			</Entry>
 			<Entry>
-				<Message>Flying to next waypoint. Home is still far from here.</Message>
-				<AudioId/>
+				<Message>For the convoy log: the patrol assignment is beginning. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the patrol assignment is beginning. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the patrol assignment is beginning, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted. The scout assignment is beginning; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout assignment is beginning; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout assignment is beginning. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout assignment is beginning -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the scout assignment is beginning. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_InitiateScan</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the scout scan is beginning, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the scout scan is beginning. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the scout scan is beginning; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The scout scan is beginning; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout scan is beginning; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_FoundTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Keep the watch up: the scout has found a target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the scout has found a target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the scout has found a target. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the scout has found a target, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the scout has found a target. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NotFoundTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The scout found no target; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout found no target. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout found no target -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the scout found no target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the scout found no target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NearTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>I would rather hear better news, but the scout is closing on its target. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the scout is closing on its target; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The scout is closing on its target; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is closing on its target; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is closing on its target. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NearTarget_Timeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the convoy log: the scout search has timed out near the target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the scout search has timed out near the target. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the scout search has timed out near the target, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the scout search has timed out near the target. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the scout search has timed out near the target; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_TransmitLocation</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The scout is transmitting the target location. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is transmitting the target location -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the scout is transmitting the target location. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the scout is transmitting the target location. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the scout is transmitting the target location. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Raider_ClearKPA</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have word that the raider area is clear of known player activity; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The raider area is clear of known player activity; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The raider area is clear of known player activity; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The raider area is clear of known player activity. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The raider area is clear of known player activity -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Raider_DetectedEnemy</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Good, bad, or both, the raider has detected an enemy. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the raider has detected an enemy, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the raider has detected an enemy. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the raider has detected an enemy; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The raider has detected an enemy; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The fighter combat profile is active -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the fighter combat profile is active. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the fighter combat profile is active. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the fighter combat profile is active. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the fighter combat profile is active, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted. The gunship combat profile is active; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship combat profile is active; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship combat profile is active. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship combat profile is active -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the gunship combat profile is active. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the freighter combat profile is active, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the freighter combat profile is active. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the freighter combat profile is active; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The freighter combat profile is active; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter combat profile is active; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Dropship_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Keep the watch up: the dropship target is approaching. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the dropship target is approaching. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the dropship target is approaching. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the dropship target is approaching, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the dropship target is approaching. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The fighter target is approaching; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter target is approaching. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter target is approaching -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the fighter target is approaching. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the fighter target is approaching. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>I would rather hear better news, but the freighter target is approaching. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the freighter target is approaching; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The freighter target is approaching; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter target is approaching; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter target is approaching. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the convoy log: the gunship target is approaching. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the gunship target is approaching. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the gunship target is approaching, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the gunship target is approaching. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the gunship target is approaching; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Friendly</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A friendly radio check has arrived. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A friendly radio check has arrived -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: a friendly radio check has arrived. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: a friendly radio check has arrived. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, a friendly radio check has arrived. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Neutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have word that a neutral radio check has arrived; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. A neutral radio check has arrived; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral radio check has arrived; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral radio check has arrived. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral radio check has arrived -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Hostile</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Good, bad, or both, a hostile radio check has arrived. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a hostile radio check has arrived, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but a hostile radio check has arrived. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that a hostile radio check has arrived; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. A hostile radio check has arrived; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Dropship_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The dropship is approaching its target -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the dropship is approaching its target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the dropship is approaching its target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the dropship is approaching its target. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the dropship is approaching its target, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted. The fighter is approaching its target; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter is approaching its target; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter is approaching its target. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter is approaching its target -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the fighter is approaching its target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the freighter is approaching its target, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the freighter is approaching its target. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the freighter is approaching its target; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The freighter is approaching its target; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter is approaching its target; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Keep the watch up: the gunship is approaching its target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the gunship is approaching its target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the gunship is approaching its target. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the gunship is approaching its target, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the gunship is approaching its target. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Rover_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The rover is approaching its target; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover is approaching its target. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover is approaching its target -- now protect the route and the people behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Keep the watch up: the rover is approaching its target. Nobody gets left behind.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the convoy log: the rover is approaching its target. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Rover_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>I would rather hear better news, but the rover target is approaching. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the rover target is approaching; keep the convoy together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted. The rover target is approaching; do not let the convoy lose its way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover target is approaching; check the ships, then check the route home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover target is approaching. Whatever waits ahead, we make it home together.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Static_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the convoy log: the static encounter target is approaching. We are not stopping here.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Good, bad, or both, the static encounter target is approaching. Stay focused on getting everyone home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the static encounter target is approaching, we adjust and keep moving. Home is still the objective.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>I would rather hear better news, but the static encounter target is approaching. Keep moving.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have word that the static encounter target is approaching; keep the convoy together.</Message>
+				<AudioId />
 				<Weights>1</Weights>
 			</Entry>
 		</Entries>

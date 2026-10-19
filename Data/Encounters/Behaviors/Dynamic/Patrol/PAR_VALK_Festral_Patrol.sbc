@@ -1,0 +1,127 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_VALK_Festral_Patrol</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [ReplenishSystems:true]
+        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
+
+        [SpawnConditionsProfiles:PAR_VALK_Festral_Patrol_SpawnConditions]
+
+        [ManipulationProfiles:PAR_VALK_Manipulation]
+        [ManipulationProfiles:PAR_VALK_Manipulation_AtmoGunship]
+
+        [UseRandomNameGenerator:true]
+        [RenameGrid:true]
+        [RandomGridNamePattern:Expedition Patrol RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+        [ProcessBlocksForCustomGridName:true]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-VALK]Valkoran Festral Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>55</Speed>
+          <Behaviour>PAR_VALK_Festral_Patrol_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Festral_Patrol_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [IgnoreCombatPhase:true]
+
+        [MinGravity:0.5]
+
+        [CustomPathStartAltitude:100]
+
+        [SkipVoxelSpawnChecks:true]
+        [SkipGridSpawnChecks:true]
+        [SkipAirDensityCheck:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Festral_Patrol_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:Patrol]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:PAR_VALK_Autopilot_Helicopter]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_VALK_Festral_Patrol_Trigger_SpawnSetup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToStatic]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+        [TriggerGroups:MSB_PatrolArea_TriggerGroup]
+        [TriggerGroups:MSB_Gunship_TriggerGroup]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_Festral_Patrol_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

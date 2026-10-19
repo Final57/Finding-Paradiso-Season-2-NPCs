@@ -53,15 +53,18 @@
         [MES Spawn Conditions]
 
         [RivalAiAnySpawn:true]
-        [FactionOwner:VALK]
+        [FactionOwner:PMC]
 
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
 
+        [AtmosphericCargoShipChance:70]
+        [GravityCargoShipChance:70]
+
         [CustomPathStartAltitude:4]
         [CargoShipTerrainPath:true]
 
-        [SkipVoxelSpawnChecks:true]
+        [SkipVoxelSpawnChecks:false]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
       </Description>
@@ -79,9 +82,9 @@
 
         [TargetData:MSB_TargetProfile_LowRange]
         [OverrideTargetData:MSB_TargetProfile_LongRange]
-        [AutopilotData:MSB_PatrolArea_Autopilot]
+        [AutopilotData:PAR_PMC_Autopilot_Rover]
 
-        [DialogueBanks:PAR_PMC_Pinniped_DialogueBank_Dynamic.xml]
+        [DialogueBanks:PAR_PMC_DialogueBank_Dynamic.xml]
 
         [UsePlayerDistanceTimer:true]
         [PlayerDistanceTrigger:50000]
@@ -130,8 +133,6 @@
       <Description>
         [RivalAI Action]
 
-        [ChangeAutopilotSpeed:true]
-        [NewAutopilotSpeed:50]
       </Description>
     </EntityComponent>
 

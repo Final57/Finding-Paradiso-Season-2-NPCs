@@ -25,6 +25,7 @@
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
         [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Hydrogen]
         [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
@@ -80,6 +81,11 @@
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
+
+        [AtmosphericCargoShip:false]
+        [GravityCargoShip:false]
+        [SpaceCargoShip:true]
+        [LunarCargoShip:true]
       </Description>
     </EntityComponent>
 
@@ -105,8 +111,6 @@
         [PlayerDistanceTimerTrigger:30000]
 
         [Triggers:PAR_VALK_FASP_Patrol_Trigger_SpawnSetup]
-
-        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
         [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]

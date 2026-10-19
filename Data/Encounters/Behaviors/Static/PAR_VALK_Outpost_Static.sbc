@@ -49,6 +49,42 @@
                 <Speed>0</Speed>
                 <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
             </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Amanda Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Julia Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Wesley Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Kevin Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>24</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_Outpost_Static_Behavior</Behaviour>
+            </Prefab>
         </Prefabs>
     </SpawnGroup>
   </SpawnGroups>
@@ -64,7 +100,7 @@
             [MES Spawn Conditions]
     
             [PlanetaryInstallation:true]
-            [PlanetaryInstallationChance:100]
+            [PlanetaryInstallationChance:50]
             [PlanetaryInstallationType:Medium]
 
             [PrefabSpawningMode:Random]
@@ -86,13 +122,14 @@
             [BehaviorName:Passive]
 
             [TargetData:MSB_TargetProfile_LongRange]
+            [DialogueBanks:PAR_VALK_DialogueBank_Static.xml]
 
             [UsePlayerDistanceTimer:true]
             [PlayerDistanceTrigger:50000]
             [PlayerDistanceTimerTrigger:30000]
 
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
-            [TriggerGroups:MSB_System_Dialogue_Dynamic]
+            [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Static]
             [TriggerGroups:MSB_System_Defense_Trigger_Guards_5000]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
             [TriggerGroups:MSB_System_AreaRestriction_TriggerGroup_5000]
@@ -111,23 +148,37 @@
             <SubtypeId>PAR_VALK_Outpost_Static_Trigger_CargoShipArrival</SubtypeId>
         </Id>
         <Description>
-            [MES AI Trigger]
+            [RivalAI Trigger]
     
             [UseTrigger:true]
             [Type:CommandReceived]
             [CommandReceiveCode:PAR_ArriveAtStation]
 
-            [MinCooldownMs:30000]
+            [MinCooldownMs:10000]
             [MaxCooldownMs:45000]
 
             [UseElseActions:true]
-            [ElseActions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansionFailed]
+            [ElseActions:PAR_VALK_Outpost_Static_Action_ArrivalBaseFailed]
 
-            [ActionExecution:All]
+            [ActionExecution:Random]
 
-            [MaxActions:2]
+            [MaxActions:-1]
             [Actions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansion]
             [Actions:PAR_VALK_Outpost_Static_Action_SpawnPatrol]
+            [Actions:PAR_VALK_Outpost_Static_Action_SpawnBaseExpansionFailed]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Outpost_Static_Action_ArrivalBaseFailed</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [UseChatBroadcast:true]
+            [ChatData:PAR_VALK_Outpost_Static_SpawnBaseExpansionFailed_Chat]
         </Description>
     </EntityComponent>
 
@@ -137,12 +188,10 @@
             <SubtypeId>PAR_VALK_Outpost_Static_Action_SpawnBaseExpansionFailed</SubtypeId>
         </Id>
         <Description>
-            [MES AI Action]
+            [RivalAI Action]
 
             [UseChatBroadcast:true]
             [ChatData:PAR_VALK_Outpost_Static_SpawnBaseExpansionFailed_Chat]
-
-            [MaxActions:2]
         </Description>
     </EntityComponent>
 
@@ -152,12 +201,13 @@
             <SubtypeId>PAR_VALK_Outpost_Static_Action_SpawnPatrol</SubtypeId>
         </Id>
         <Description>
-            [MES AI Action]
+            [RivalAI Action]
+
+            [UseChatBroadcast:true]
+            [ChatData:PAR_VALK_Outpost_Static_Action_SpawnPatrol_Chat]
 
             [SpawnEncounter:true]
             [Spawner:PAR_VALK_Outpost_Static_SpawnPatrolContainer]
-
-            [MaxActions:3]
         </Description>
     </EntityComponent>
 
@@ -167,15 +217,13 @@
             <SubtypeId>PAR_VALK_Outpost_Static_Action_SpawnBaseExpansion</SubtypeId>
         </Id>
         <Description>
-            [MES AI Action]
+            [RivalAI Action]
 
             [UseChatBroadcast:true]
             [ChatData:PAR_VALK_Outpost_Static_SpawnBaseExpansion_Chat]
 
             [SpawnEncounter:true]
             [Spawner:PAR_VALK_Outpost_Static_SpawnContainer]
-
-            [MaxActions:3]
         </Description>
     </EntityComponent>
 
@@ -195,12 +243,13 @@
 
             [MaxSpawns:-1]
             [SpawnGroups:PAR_VALK_FASP_Patrol_SpawnGroup]
+            [SpawnGroups:PAR_VALK_FASP-A_Patrol_SpawnGroup]
 
             [MinDistance:75]
             [MaxDistance:200]
 
-            [MinAltitude:25]
-            [MaxAltitude:75]
+            [MinAltitude:50]
+            [MaxAltitude:100]
         </Description>
     </EntityComponent>
 
@@ -229,7 +278,7 @@
             [MaxDistance:300]
 
             [MinAltitude:0]
-            [MaxAltitude:5]
+            [MaxAltitude:1]
         </Description>
     </EntityComponent>
 
@@ -276,14 +325,46 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
         <Id>
             <TypeId>Inventory</TypeId>
-            <SubtypeId>PAR_VALK_Outpost_Static_SpawnBaseExpansion_Chat</SubtypeId>
+            <SubtypeId>PAR_VALK_Outpost_Static_Action_SpawnPatrol_Chat</SubtypeId>
         </Id>
         <Description>
-            [MES AI Chat]
+            [RivalAI Chat]
 
             [UseChat:true]
             [StartsReady:true]
             [MaxChats:1]
+            [MinTime:20]
+            [BroadcastRandomly:true]
+            [Author:VALK Outpost Manager]
+            [Color:Blue]
+
+            [ChatMessages:Good Hunting, Pilots! Give Em Hell.]
+            [ChatAudio:ArcHudGPSNotification1]
+            [BroadcastChatType:Chat]
+
+            [ChatMessages:Launching Combat Air Patrol, let us know what you find out there.]
+            [ChatAudio:ArcHudGPSNotification1]
+            [BroadcastChatType:Chat]
+
+            [ChatMessages:Unload the cargo and get the new recruits to their stations!]
+            [ChatAudio:ArcHudGPSNotification1]
+            [BroadcastChatType:Chat]
+
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_VALK_Outpost_Static_SpawnBaseExpansion_Chat</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Chat]
+
+            [UseChat:true]
+            [StartsReady:true]
+            [MaxChats:1]
+            [MinTime:20]
             [BroadcastRandomly:true]
             [Author:VALK Outpost Manager]
             [Color:Blue]
@@ -313,11 +394,12 @@
             <SubtypeId>PAR_VALK_Outpost_Static_SpawnBaseExpansionFailed_Chat</SubtypeId>
         </Id>
         <Description>
-            [MES AI Chat]
+            [RivalAI Chat]
 
             [UseChat:true]
             [StartsReady:true]
             [MaxChats:1]
+            [MinTime:10]
             [BroadcastRandomly:true]
             [Author:VALK Outpost Manager]
             [Color:Blue]
@@ -333,11 +415,6 @@
             [ChatMessages:Get those empty crates unloaded!  On the Double!]
             [ChatAudio:ArcHudGPSNotification1]
             [BroadcastChatType:Chat]
-
-            [ChatMessages:Unload the cargo and get the new recruits to their stations!]
-            [ChatAudio:ArcHudGPSNotification1]
-            [BroadcastChatType:Chat]
-
         </Description>
     </EntityComponent>
 
@@ -351,7 +428,7 @@
 
         [Waypoint:RelativeOffset]
         [RelativeEntity:Self]
-        [Offset:{X:0 Y:100 Z:25}]
+        [Offset:{X:0 Y:75 Z:25}]
       </Description>
 
     </EntityComponent>

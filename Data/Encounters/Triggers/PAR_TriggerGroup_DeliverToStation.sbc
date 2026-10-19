@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_TriggerGroup_DeliverToStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI TriggerGroup]
+
+        [Triggers:PAR_Trigger_CallForStations]
+        [Triggers:PAR_Trigger_DeviateToStation]
+        [Triggers:PAR_Trigger_ArriveAtStation]
+        [Triggers:PAR_Trigger_PrepareToArriveAtStation]
+        [Triggers:PAR_Trigger_ArrivalTimeout]
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

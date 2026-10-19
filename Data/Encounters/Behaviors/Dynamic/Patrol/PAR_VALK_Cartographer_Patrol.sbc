@@ -23,6 +23,7 @@
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
         [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Hydrogen]
         [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
@@ -54,14 +55,12 @@
 
         [RivalAiAnySpawn:true]
         [FactionOwner:VALK]
-        [ReplenishSystems:true]
 
         [SpaceCargoShip:true]
         [LunarCargoShip:true]
         [AtmosphericCargoShip:true] 
-        [GravityCargoship:true]
+        [GravityCargoShip:true]
 
-        [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
         [SkipAirDensityCheck:true]
         [MaxGravity:0.5]
@@ -83,8 +82,7 @@
 
         [BehaviorName:Patrol]
 
-        [TargetData:MSB_TargetProfile_LowRange]
-        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [TargetData:MSB_TargetProfile_LongRange]
         [AutopilotData:MSB_Patrol_Autopilot]
         [SecondaryAutopilotData:MSB_Gunship_Autopilot]
 
@@ -97,8 +95,6 @@
         [JumpToTarget:true]
 
         [Triggers:PAR_VALK_Cartographer_Patrol_Trigger_SpawnSetup]
-
-        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 

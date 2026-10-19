@@ -5,6 +5,27 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Trigger_CallForStations</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:180000]
+
+        [MaxActions:-1]
+        [Actions:PAR_Action_CallForStations]
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>PAR_Trigger_DeviateToStation</SubtypeId>
       </Id>
       <Description>
@@ -37,19 +58,52 @@
         [AddWaypointFromCommand:true]
         [UseChatBroadcast:true]
         [ChatData:PAR_Chat_DeviateToStation]
-        
-        [ChangeAutopilotProfile:true]
-        [AutopilotProfile:Secondary]
+
+        [ChangeAutopilotMinAltitude:true]
+        [NewAutopilotMinAltitude:70]
+
+        [ResetCooldownTimeOfTriggers:true]
+        [ResetTriggerCooldownNames:PAR_Trigger_PrepareToArriveAtStation]
 
         [EnableTriggers:true]
-        [EnableTriggerNames:PAR_Trigger_ArriveAtStation]
+        [EnableTriggerNames:PAR_Trigger_PrepareToArriveAtStation]
 
         [DisableTriggers:true]
         [DisableTriggerNames:PAR_Trigger_CallForStations]
-
-        [ResetCooldownTimeOfTriggers:true]
+        [DisableTriggerNames:PAR_Trigger_DeviateToStation]
       </Description>
 
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Chat_DeviateToStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:VALK Transport Pilot]
+        [Color:Blue]
+
+        [ChatMessages:Re-routing to station. Keep an eye out for any hostiles in the area.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Outpost upgrade en-route. Hold position and await further instructions.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Proceeding to station. Adjusting course as necessary.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
     </EntityComponent>
 
   </EntityComponents>

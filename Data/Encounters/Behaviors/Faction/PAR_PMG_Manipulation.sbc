@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityComponents>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMG_Manipulation</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseRandomNameGenerator:true]
+                [RandomGridNamePrefix:(NPC-PMG)]
+                [RenameGrid:true]
+
+                [UseGridDereliction:true]
+                [DerelictionProfiles:PAR_PMG_Dereliction]
+
+                [SkinRandomBlocks:true]
+                [SkinRandomBlocksTextures:(null)]
+                [SkinRandomBlocksTextures:Heavy_Rust_Armor]
+                [MinPercentageSkinRandomBlocks:60]
+                [MaxPercentageSkinRandomBlocks:80]
+
+                [ClearAuthorship:true]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMG_Dereliction</SubtypeId>
+            </Id>
+            <Description>
+                [MES Dereliction]
+
+                [Chance:80]
+
+                [Blocks:MyObjectBuilder_CubeBlock/(null)]
+                [Blocks:MyObjectBuilder_Connector/(null)]
+                [Blocks:MyObjectBuilder_ShipConnector/(null)]
+                [Blocks:MyObjectBuilder_ConveyorSorter/(null)]
+                [Blocks:MyObjectBuilder_Beacon/(null)]
+                [Blocks:MyObjectBuilder_RadioAntenna/(null)]
+                [Blocks:MyObjectBuilder_WindTurbine/(null)]
+                [Blocks:MyObjectBuilder_CargoContainer/(null)]
+                [MatchOnlyTypeId:true]
+
+                [MinPercentage:20]
+                [MaxPercentage:80]
+            </Description>
+        </EntityComponent>
+
+    </EntityComponents>
+</Definitions>

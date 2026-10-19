@@ -1,0 +1,1474 @@
+<?xml version='1.0' encoding='utf-8'?>
+<DialogueBank>
+	<ChatProfileId>MSB_Chat_Default</ChatProfileId>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyed</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Apparently, the hostile contact is destroyed. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the hostile contact is destroyed. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the hostile contact is destroyed. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerHelp</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have confirmed that the hostile contact fell with allied help; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the hostile contact fell with allied help, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the hostile contact fell with allied help. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the hostile contact fell with allied help. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the hostile contact fell with allied help. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerMadeFinalShot</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The allied final shot ended the hostile contact -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the allied final shot ended the hostile contact. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The allied final shot ended the hostile contact. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the allied final shot ended the hostile contact; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the allied final shot ended the hostile contact, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>DamageByFriendlyOrNeutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted: friendly or neutral fire struck our hull. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: friendly or neutral fire struck our hull. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: friendly or neutral fire struck our hull. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFire</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If hostile weapons are engaging us, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, hostile weapons are engaging us. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, hostile weapons are engaging us. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: hostile weapons are engaging us. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Hostile weapons are engaging us; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireHealthLow</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The situation is now this: hull integrity has fallen to a critical level. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Hull integrity has fallen to a critical level. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that hull integrity has fallen to a critical level; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If hull integrity has fallen to a critical level, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, hull integrity has fallen to a critical level. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireGoingDown</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The vessel is going down under fire; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the vessel is going down under fire. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The vessel is going down under fire -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the vessel is going down under fire. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The vessel is going down under fire. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the record, our position has been compromised. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, our position has been compromised. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: our position has been compromised. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Our position has been compromised; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: our position has been compromised. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The operation is complete and withdrawal is beginning. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the operation is complete and withdrawal is beginning; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the operation is complete and withdrawal is beginning, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the operation is complete and withdrawal is beginning. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the operation is complete and withdrawal is beginning. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn_PrepareForLanding</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We can work with this: the landing preparations are underway. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing preparations are underway -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the landing preparations are underway. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing preparations are underway. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the landing preparations are underway; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn_LandingTimeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Apparently, the landing window has expired. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the landing window has expired. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing window has expired; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the landing window has expired. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The landing window has expired -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Friendly</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have confirmed that a friendly vessel is within range; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a friendly vessel is within range, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, a friendly vessel is within range. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, a friendly vessel is within range. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: a friendly vessel is within range. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Neutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A neutral vessel is within range -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: a neutral vessel is within range. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral vessel is within range. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that a neutral vessel is within range; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a neutral vessel is within range, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted: the all-clear is being transmitted. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear is being transmitted; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the all-clear is being transmitted. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear is being transmitted -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the all-clear is being transmitted. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the all-clear has been received, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the all-clear has been received. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the all-clear has been received. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the all-clear has been received. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The all-clear has been received; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The situation is now this: a distress signal is being transmitted. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A distress signal is being transmitted. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that a distress signal is being transmitted; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a distress signal is being transmitted, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, a distress signal is being transmitted. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A distress signal has been received; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: a distress signal has been received. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A distress signal has been received -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: a distress signal has been received. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A distress signal has been received. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>SOS_Response_Timeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the record, the distress response window has expired. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the distress response window has expired. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the distress response window has expired. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The distress response window has expired; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the distress response window has expired. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>A compromise report has been received. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that a compromise report has been received; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a compromise report has been received, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, a compromise report has been received. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, a compromise report has been received. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>AreaRestriction_Warning</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We can work with this: a restricted area warning is active. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A restricted area warning is active -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: a restricted area warning is active. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A restricted area warning is active. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that a restricted area warning is active; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>ShipLanding</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Apparently, the ship is beginning its landing approach. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the ship is beginning its landing approach. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The ship is beginning its landing approach; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the ship is beginning its landing approach. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The ship is beginning its landing approach -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Cargoship_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have confirmed that the cargo ship assignment is beginning; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the cargo ship assignment is beginning, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the cargo ship assignment is beginning. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the cargo ship assignment is beginning. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the cargo ship assignment is beginning. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Patrol_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The patrol assignment is beginning -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the patrol assignment is beginning. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The patrol assignment is beginning. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the patrol assignment is beginning; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the patrol assignment is beginning, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_InitRole</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted: the scout assignment is beginning. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout assignment is beginning; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the scout assignment is beginning. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout assignment is beginning -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the scout assignment is beginning. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_InitiateScan</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the scout scan is beginning, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the scout scan is beginning. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the scout scan is beginning. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the scout scan is beginning. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout scan is beginning; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_FoundTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The situation is now this: the scout has found a target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout has found a target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the scout has found a target; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the scout has found a target, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the scout has found a target. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NotFoundTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The scout found no target; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the scout found no target. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout found no target -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the scout found no target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout found no target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NearTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the record, the scout is closing on its target. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the scout is closing on its target. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the scout is closing on its target. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is closing on its target; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the scout is closing on its target. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_NearTarget_Timeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The scout search has timed out near the target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the scout search has timed out near the target; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the scout search has timed out near the target, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the scout search has timed out near the target. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the scout search has timed out near the target. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Scout_TransmitLocation</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We can work with this: the scout is transmitting the target location. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is transmitting the target location -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the scout is transmitting the target location. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The scout is transmitting the target location. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the scout is transmitting the target location; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Raider_ClearKPA</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Apparently, the raider area is clear of known player activity. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the raider area is clear of known player activity. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The raider area is clear of known player activity; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the raider area is clear of known player activity. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The raider area is clear of known player activity -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Raider_DetectedEnemy</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have confirmed that the raider has detected an enemy; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the raider has detected an enemy, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the raider has detected an enemy. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the raider has detected an enemy. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the raider has detected an enemy. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The fighter combat profile is active -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the fighter combat profile is active. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter combat profile is active. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the fighter combat profile is active; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the fighter combat profile is active, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted: the gunship combat profile is active. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship combat profile is active; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the gunship combat profile is active. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship combat profile is active -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the gunship combat profile is active. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_InitCombatType</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the freighter combat profile is active, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the freighter combat profile is active. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the freighter combat profile is active. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the freighter combat profile is active. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter combat profile is active; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Dropship_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The situation is now this: the dropship target is approaching. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The dropship target is approaching. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the dropship target is approaching; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the dropship target is approaching, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the dropship target is approaching. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The fighter target is approaching; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the fighter target is approaching. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter target is approaching -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the fighter target is approaching. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter target is approaching. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the record, the freighter target is approaching. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the freighter target is approaching. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the freighter target is approaching. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter target is approaching; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the freighter target is approaching. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The gunship target is approaching. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the gunship target is approaching; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the gunship target is approaching, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the gunship target is approaching. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the gunship target is approaching. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Friendly</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We can work with this: a friendly radio check has arrived. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A friendly radio check has arrived -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: a friendly radio check has arrived. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A friendly radio check has arrived. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that a friendly radio check has arrived; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Neutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Apparently, a neutral radio check has arrived. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: a neutral radio check has arrived. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral radio check has arrived; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: a neutral radio check has arrived. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A neutral radio check has arrived -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Interaction_RadioCheck_Hostile</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>We have confirmed that a hostile radio check has arrived; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a hostile radio check has arrived, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, a hostile radio check has arrived. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, a hostile radio check has arrived. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: a hostile radio check has arrived. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Dropship_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The dropship is approaching its target -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the dropship is approaching its target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The dropship is approaching its target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the dropship is approaching its target; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the dropship is approaching its target, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Fighter_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Noted: the fighter is approaching its target. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter is approaching its target; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the fighter is approaching its target. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The fighter is approaching its target -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the fighter is approaching its target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Freighter_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If the freighter is approaching its target, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the freighter is approaching its target. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the freighter is approaching its target. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the freighter is approaching its target. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The freighter is approaching its target; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Gunship_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The situation is now this: the gunship is approaching its target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The gunship is approaching its target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the gunship is approaching its target; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the gunship is approaching its target, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the gunship is approaching its target. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Rover_ApproachingTarget</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The rover is approaching its target; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the rover is approaching its target. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover is approaching its target -- excellent, another detail for the report.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The situation is now this: the rover is approaching its target. I hope the rate covers it.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover is approaching its target. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Rover_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>For the record, the rover target is approaching. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the rover target is approaching. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Noted: the rover target is approaching. I was promised a simpler assignment.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The rover target is approaching; nobody has explained whether this is included.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We can work with this: the rover target is approaching. Please do not add a second emergency.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Static_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The static encounter target is approaching. That sounds manageable, which is usually when it is not.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>We have confirmed that the static encounter target is approaching; please keep the expensive parts attached.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the static encounter target is approaching, then let us finish before the contract becomes complicated.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>For the record, the static encounter target is approaching. For the invoice, I need a new line item.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Apparently, the static encounter target is approaching. That should be useful to someone billing this job.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+</DialogueBank>

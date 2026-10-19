@@ -83,8 +83,6 @@
         [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
 
-        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
-
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 
         [TriggerGroups:MSB_DynamicCommon_TriggerGroup]

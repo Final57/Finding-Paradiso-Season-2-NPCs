@@ -20,6 +20,8 @@
 
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
+                [ReplenishSystems:true]
+
                 [UseRandomNameGenerator:true]
                 [RenameGrid:true]
                 [ProcessBlocksForCustomGridName:true]
@@ -56,7 +58,6 @@
 
                 [RivalAiAnySpawn:true]
                 [FactionOwner:ODIN]
-                [ReplenishSystems:true]
 
                 [IgnoreCombatPhase:true]
 
@@ -87,7 +88,7 @@
                 [AutopilotData:MSB_Scout_Autopilot]
                 [SecondaryAutopilotData:MSB_Gunship_Autopilot]
 
-                [DialogueBanks:PAR_ODIN_Muninn_Scout_DialogueBank.xml]
+                [DialogueBanks:PAR_ODIN_DialogueBanks_Dynamic.xml]
 
                 [UsePlayerDistanceTimer:true]
                 [PlayerDistanceTrigger:10000] 

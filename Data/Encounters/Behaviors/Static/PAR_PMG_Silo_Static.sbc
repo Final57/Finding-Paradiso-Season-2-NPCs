@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_PMG_Silo_Static_SpawnGroup</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
+
+            [SpawnConditionsProfiles:PAR_PMG_Silo_Static_SpawnConditions]
+            
+            [ManipulationProfiles:PAR_PMG_Manipulation]
+
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
+
+            [UseRandomNameGenerator:true]
+            [RandomGridNamePattern:Site RandomNumberRandomNumberRandomNumber]
+            [ProcessBlocksForCustomGridName:true]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="[MES-PMG] Silo">
+                <Position>
+                    <X>0.0</X>
+                    <Y>6.6</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_Silo_Static_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Silo_Static_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:25]
+            [PlanetaryInstallationType:Medium]
+    
+            [RivalAiAnySpawn:true]
+            [FactionOwner:PMG]
+        </Description>
+    </EntityComponent>
+
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Silo_Static_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Passive]
+
+            [TargetData:MSB_TargetProfile_LongRange]
+
+            [TriggerGroups:MSB_StaticCommon_TriggerGroup]
+            [Triggers:PAR_PMG_Silo_Static_SpawnSetup_Trigger]
+        </Description>
+    </EntityComponent>
+
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Silo_Static_SpawnSetup_Trigger</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Trigger]
+
+            [UseTrigger:true]
+            [Type:Timer]
+
+            [MinCooldownMs:5000]
+            [MaxCooldownMs:5001]            
+
+            [MaxActions:4]
+            [Actions:PAR_PMG_Silo_Static_SpawnSetup_Action]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Silo_Static_SpawnSetup_Action</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [SpawnEncounter:true]
+            [Spawner:PAR_PMG_Container_Static_SpawnContainer]
+            [Spawner:PAR_PMG_Tower_Static_SpawnContainer]
+        </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+
+</Definitions>

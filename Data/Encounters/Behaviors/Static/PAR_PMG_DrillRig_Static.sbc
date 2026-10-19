@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_PMG_DrillRig_Static_SpawnGroup</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
+
+            [SpawnConditionsProfiles:PAR_PMG_DrillRig_Static_SpawnConditions]
+            
+            [ManipulationProfiles:PAR_PMG_Manipulation]
+
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
+
+            [UseRandomNameGenerator:true]
+            [RandomGridNamePattern:Site RandomNumberRandomNumberRandomNumber]
+            [ProcessBlocksForCustomGridName:true]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="[MES-PMG] Stone Drill Rig">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_DrillRig_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-PMG] Drill Rig">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_DrillRig_Static_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_DrillRig_Static_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:60]
+            [PlanetaryInstallationType:Small]
+
+            [PrefabSpawningMode:Random]
+    
+            [RivalAiAnySpawn:true]
+            [FactionOwner:PMG]
+        </Description>
+    </EntityComponent>
+
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_DrillRig_Static_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Passive]
+
+            [TargetData:MSB_TargetProfile_LongRange]
+
+            [TriggerGroups:MSB_StaticCommon_TriggerGroup]
+            [Triggers:PAR_PMG_DrillRig_Static_SpawnSetup_Trigger]
+        </Description>
+    </EntityComponent>
+
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_DrillRig_Static_SpawnSetup_Trigger</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Trigger]
+
+            [UseTrigger:true]
+            [Type:Timer]
+
+            [MinCooldownMs:5000]
+            [MaxCooldownMs:5001]            
+
+            [MaxActions:2]
+            [Actions:PAR_PMG_DrillRig_Static_SpawnSetup_Action]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_DrillRig_Static_SpawnSetup_Action</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Action]
+
+            [SpawnEncounter:true]
+            [Spawner:PAR_PMG_Container_Static_SpawnContainer]
+            [Spawner:PAR_PMG_Tower_Static_SpawnContainer]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Container_Static_SpawnContainer</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Spawn]
+
+            [UseSpawn:true]
+            [StartsReady:true]
+            [SpawningType:CustomSpawn]
+            [MaxSpawns:2]
+
+            [FactionOwner:PMG]
+
+            [SpawnGroups:PAR_PMG_Container_Static_SpawnGroup]
+
+            [UseRelativeSpawnPosition:false]
+            [IgnoreSafetyChecks:true]
+
+            [MinDistance:10]
+            [MaxDistance:75]
+            [MinAltitude:0]
+            [MaxAltitude:0]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Tower_Static_SpawnContainer</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Spawn]
+
+            [UseSpawn:true]
+            [StartsReady:true]
+            [SpawningType:CustomSpawn]
+            [MaxSpawns:1]
+
+            [FactionOwner:PMG]
+
+            [SpawnGroups:PAR_PMG_Tower_Static_SpawnGroup]
+
+            [UseRelativeSpawnPosition:false]
+            [IgnoreSafetyChecks:true]
+
+            [MinDistance:25]
+            [MaxDistance:75]
+            [MinAltitude:0]
+            [MaxAltitude:0]
+        </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+
+</Definitions>

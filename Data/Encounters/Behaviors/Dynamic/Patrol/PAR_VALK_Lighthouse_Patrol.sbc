@@ -22,6 +22,7 @@
 
         [ManipulationProfiles:PAR_VALK_Manipulation]
         [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Hydrogen]
         [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
       </Description>
@@ -58,12 +59,12 @@
         [SpaceCargoShip:true]
         [LunarCargoShip:true]
         [AtmosphericCargoShip:true]
-        [GravityCargoship:true]
+        [GravityCargoShip:true]
 
-        [SpaceCargoShipChance:8]
-        [LunarCargoShipChance:8]
-        [AtmosphericCargoShipChance:8]
-        [GravityCargoShipChance:8]
+        [SpaceCargoShipChance:30]
+        [LunarCargoShipChance:30]
+        [AtmosphericCargoShipChance:30]
+        [GravityCargoShipChance:30]
 
         [SkipGridSpawnChecks:true]
         [IgnoreCombatPhase:true]
@@ -94,15 +95,12 @@
         [Triggers:PAR_VALK_Lighthouse_Patrol_Trigger_SpawnSetup]
         [Triggers:PAR_VALK_Lighthouse_Patrol_Trigger_Escorts]
 
-        [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
-
         [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
         [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
 
         [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
         [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
         [TriggerGroups:MSB_System_Communication_TriggerGroup]
-        [//TriggerGroups:MSB_System_Crash_TriggerGroup]
         [Triggers:MSB_System_EngagementRange_Trigger_3000]
 
         [TriggerGroups:MSB_Cargoship_TriggerGroup]
@@ -195,12 +193,14 @@
 
         [SpawnGroups:PAR_VALK_FASP_Escort_SpawnGroup]
 
-        [UseRelativeSpawnPosition:False]
+        [InheritNpcAltitude:true]
+
+        [UseRelativeSpawnPosition:false]
         [MinDistance:300]
         [MaxDistance:500]
-        [MinAltitude:300]
-        [MaxAltitude:600]
-        [IgnoreSafetyChecks:False]
+        [MinAltitude:200]
+        [MaxAltitude:300]
+        [IgnoreSafetyChecks:false]
       </Description>
     </EntityComponent>
 
@@ -223,12 +223,14 @@
         [SpawnGroups:PAR_VALK_Viator_Escort_SpawnGroup]
         [SpawnGroups:PAR_VALK_Pathfinder_Escort_SpawnGroup]
 
-        [UseRelativeSpawnPosition:False]
+        [InheritNpcAltitude:true]
+
+        [UseRelativeSpawnPosition:false]
         [MinDistance:300]
         [MaxDistance:500]
-        [MinAltitude:300]
-        [MaxAltitude:600]
-        [IgnoreSafetyChecks:False]
+        [MinAltitude:200]
+        [MaxAltitude:300]
+        [IgnoreSafetyChecks:false]
       </Description>
     </EntityComponent>
 

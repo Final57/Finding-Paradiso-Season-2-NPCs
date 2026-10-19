@@ -85,6 +85,7 @@
             [BehaviorName:Passive]
 
             [TargetData:MSB_TargetProfile_LongRange]
+            [DialogueBanks:PAR_VALK_DialogueBank_Static.xml]
 
             [UsePlayerDistanceTimer:true]
             [PlayerDistanceTrigger:50000]
@@ -94,7 +95,8 @@
             [Triggers:PAR_VALK_Hangar_Static_Trigger_SpawnPatrol]
 
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
-            [TriggerGroups:MSB_System_Defense_Trigger_Guards_7500]
+            [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Static]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_5000]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
             [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
             
@@ -107,7 +109,7 @@
             <SubtypeId>PAR_VALK_Hangar_Static_Trigger_SpawnPatrol</SubtypeId>
         </Id>
         <Description>
-            [MES AI Trigger]
+            [RivalAI Trigger]
 
             [Type:Timer]
             [UseTrigger:true] 
@@ -123,30 +125,10 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
         <Id>
             <TypeId>Inventory</TypeId>
-            <SubtypeId>MSB_System_Communication_Action_Enable_SOS_Response_Dynamic</SubtypeId>
-        </Id>
-        <Description>
-            [MES AI Trigger]
-
-            [Type:Timer]
-            [UseTrigger:true] 
-            [StartsReady:true]
-
-            [MinCooldownMs:1000]
-            [MaxCooldownMs:1501]
-
-            [MaxActions:1] 
-            [Actions:PAR_VALK_Hangar_Static_Action_SpawnPatrol]
-        </Description>
-    </EntityComponent>
-
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-        <Id>
-            <TypeId>Inventory</TypeId>
             <SubtypeId>PAR_VALK_Hangar_Static_Action_SpawnPatrol</SubtypeId>
         </Id>
         <Description>
-            [MES AI Action]
+            [RivalAI Action]
 
             [Chance:50]
 
@@ -161,27 +143,28 @@
             <SubtypeId>PAR_VALK_Hangar_Patrol_SpawnContainer</SubtypeId>
         </Id>
         <Description>
-            [MES AI Spawn]
+            [RivalAI Spawn]
 
             [UseSpawn:True]
 
             [StartsReady:True]
-            [SpawnMinCooldownMs:3000]
-            [SpawnMaxCooldownMs:6000]
+            [SpawnMinCooldown:3000]
+            [SpawnMaxCooldown:6000]
             [MaxSpawns:1]
 
             [SpawnGroups:PAR_VALK_Archer_Patrol_SpawnGroup]
             [SpawnGroups:PAR_VALK_Viator_Patrol_SpawnGroup]
             [SpawnGroups:PAR_VALK_Pathfinder_Patrol_SpawnGroup]
             [SpawnGroups:PAR_VALK_FASP_Patrol_SpawnGroup]
+            [SpawnGroups:PAR_VALK_FASP-A_Patrol_SpawnGroup]
             [SpawnGroups:PAR_VALK_Fumblebee_Patrol_SpawnGroup]
 
-            [UseRelativeSpawnPosition:False]
+            [UseRelativeSpawnPosition:false]
             [MinDistance:100]
             [MaxDistance:300]
             [MinAltitude:100]
             [MaxAltitude:300]
-            [IgnoreSafetyChecks:False]
+            [IgnoreSafetyChecks:false]
         </Description>
     </EntityComponent>    
 
@@ -191,7 +174,7 @@
             <SubtypeId>PAR_VALK_Hangar_Static_Trigger_PlaceCrew</SubtypeId>
         </Id>
         <Description>
-            [MES AI Trigger]
+                [RivalAI Trigger]
 
             [Type:PlayerNear]
 
@@ -213,7 +196,7 @@
             <SubtypeId>PAR_VALK_Hangar_Static_Action_PlaceCrew</SubtypeId>
         </Id>
         <Description>
-            [MES AI Action]
+            [RivalAI Action]
 
             [AddBotsToGrid:true]
             [BotCount:6]

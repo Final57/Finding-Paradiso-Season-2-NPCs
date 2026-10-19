@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Trigger_PrepareToArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:false]
+        [StartsReady:false]
+        [Type:WaypointNear]
+
+        [TargetDistance:500]
+
+        [MinCooldownMs:300]
+        [MaxCooldownMs:301]
+
+        [MaxActions:1]
+        [Actions:PAR_Action_PrepareToArriveAtStation]
+        [Actions:PAR_Action_CallToShedEscorts]
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Action_PrepareToArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Secondary]
+
+        [UseChatBroadcast:true]
+        [ChatData:PAR_Chat_PrepareToArriveAtStation]
+
+        [ResetCooldownTimeOfTriggers:true]
+        [ResetTriggerCooldownNames:PAR_Trigger_ArrivalTimeout]
+        [ResetTriggerCooldownNames:PAR_Trigger_ArriveAtStation]
+
+        [EnableTriggers:true]
+        [EnableTriggerNames:PAR_Trigger_ArriveAtStation]
+        [EnableTriggerNames:PAR_Trigger_ArrivalTimeout]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Chat_PrepareToArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+  
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:VALK Transport Pilot]
+        [Color:Blue]
+
+        [ChatMessages:Station, on approach to docking port 4-7]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Crew to positions, prepare for docking.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Deflating the automatic pilot, preparing for manual docking.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Tell them the gear is down and we're ready to land.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Trigger_ArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerA]
+
+        [StartsReady:false]
+        [MaxActions:-1]
+        [Actions:PAR_Action_ArriveAtStation]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Action_ArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [UseChatBroadcast:true]
+        [ChatData:PAR_Chat_ArriveAtStation]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:PAR_Trigger_ArriveAtStation]
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Primary]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:PAR_Command_ArriveAtStation]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Command_ArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:PAR_ArriveAtStation]
+        [SingleRecipient:true]
+        [MatchSenderReceiverOwners:true]
+
+        [IgnoreAntennaRequirement:true]
+        [IgnoreReceiverAntennaRequirement:true]
+        [Radius:1000]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Chat_ArriveAtStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:VALK Transport Pilot]
+        [Color:Blue]
+
+        [ChatMessages:Station, we have arrived. Beginning unrep.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Postition locked, initiating cargo transfer.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Trigger_ArrivalTimeout</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:false]
+        [Type:Timer]
+
+        [MinCooldownMs:300000]
+        [MaxCooldownMs:300001]
+
+        [MaxActions:-1]
+        [Actions:PAR_Action_ArrivalTimeout]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Action_ArrivalTimeout</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [UseChatBroadcast:true]
+        [ChatData:PAR_Chat_ArrivalTimeout]
+
+        [ChangeAutopilotProfile:true]
+        [AutopilotProfile:Primary]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:PAR_Trigger_ArrivalTimeout]
+
+        [RecalculateDespawnCoords:true]
+
+        [Retreat:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_Chat_ArrivalTimeout</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:1]
+        [BroadcastRandomly:true]
+        [Author:VALK Transport Pilot]
+        [Color:Blue]
+
+        [ChatMessages:Winds are too strong for safe docking. Waving off!]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Unable to proceed with docking due to adverse conditions. Dropping the ball, tower.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Retreating to a safe distance until conditions improve.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

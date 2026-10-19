@@ -75,7 +75,7 @@
         [AutopilotData:PAR_ODIN_Autopilot_DefensiveEscort]
         [SecondaryAutopilotData:MSB_Fighter_Autopilot]
 
-        [DialogueBanks:PAR_ODIN_DialogueBank_Dynamic.xml]
+        [DialogueBanks:PAR_ODIN_DialogueBanks_Dynamic.xml]
 
         [Triggers:PAR_ODIN_Huginn_Escort_Trigger_SpawnSetup]
 
@@ -125,8 +125,8 @@
       <Description>
         [RivalAI Action]
 
-        [ChangeAutoPilotSpeed:true]
-        [NewAutoPilotSpeed:75]
+        [ChangeAutopilotSpeed:true]
+        [NewAutopilotSpeed:75]
       </Description>
     </EntityComponent>
 

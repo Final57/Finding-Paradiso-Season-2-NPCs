@@ -1,0 +1,146 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <SpawnGroups>
+
+        <SpawnGroup>
+            <Id>
+                <TypeId>SpawnGroupDefinition</TypeId>
+                <SubtypeId>PAR_PMC_Hampster_Cargoship_Spawngroup</SubtypeId>
+            </Id>
+            <Description>
+                [Modular Encounters SpawnGroup]
+
+                [UseRivalAi:true]
+                [RivalAiReplaceRemoteControl:true]
+
+                [SpawnConditionsProfiles:PAR_PMC_Hampster_Cargoship_SpawnConditions]
+
+                [ManipulationProfiles:PAR_PMC_Manipulation]
+                [ManipulationProfiles:PAR_PMC_Manipulation_Fighter]
+                [ManipulationProfiles:PAR_PMC_Manipulation_Hover_Rover]
+
+                [ReplenishSystems:true]
+
+                [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+
+                [UseRandomNameGenerator:true]
+                [RandomGridNamePattern:PMC Transport RandomLetterRandomNumber]
+                [RenameGrid:true]
+                [ProcessBlocksForCustomGridName:true]
+            </Description>
+            <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+            <IsPirate>true</IsPirate>
+            <Frequency>5.0</Frequency>
+            <Prefabs>
+                <Prefab SubtypeId="[MES-PMC] Hampster Class">
+                    <Position>
+                        <X>0.0</X>
+                        <Y>0.0</Y>
+                        <Z>0.0</Z>
+                    </Position>
+                    <Speed>2</Speed>
+                    <Behaviour>PAR_PMC_Hampster_Cargoship_Behavior</Behaviour>
+                </Prefab>
+            </Prefabs>
+        </SpawnGroup>
+
+    </SpawnGroups>
+    <EntityComponents>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMC_Hampster_Cargoship_SpawnConditions</SubtypeId>
+            </Id>
+            <Description>
+                [MES Spawn Conditions]
+
+                [GravityCargoShip:true]
+                [AtmosphericCargoShip:true]
+
+                [RivalAiAnySpawn:true]
+                [FactionOwner:PMC]
+
+
+                [SkipVoxelSpawnChecks:false]
+                [IgnoreCombatPhase:true]
+                [SkipAirDensityCheck:true]
+
+                [CustomPathStartAltitude:4]
+                [CargoShipTerrainPath:true]
+
+                [AtmosphericCargoShipChance:70]
+                [GravityCargoShipChance:70]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMC_Hampster_Cargoship_Behavior</SubtypeId>
+            </Id>
+            <Description>
+                [RivalAI Behavior]
+
+                [BehaviorName:CargoShip]
+                [TargetData:MSB_TargetProfile_LowRange]
+                [OverrideTargetData:MSB_TargetProfile_LongRange]
+                [AutopilotData:PAR_PMC_Autopilot_Rover]
+
+                [DialogueBanks:PAR_PMC_DialogueBank_Dynamic.xml]
+
+                [UsePlayerDistanceTimer:true]
+                [PlayerDistanceTrigger:50000] 
+                [PlayerDistanceTimerTrigger:30000]
+
+                [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+                [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+                [TriggerGroups:MSB_System_Communication_TriggerGroup]
+
+                [TriggerGroups:MSB_Rover_TriggerGroup]
+                [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMC_Hampster_Cargoship_Trigger_PlaceCrew</SubtypeId>
+            </Id>
+            <Description>
+                [RivalAI Trigger]
+
+                [Type:PlayerNear]
+
+                [UseTrigger:true]
+                [StartsReady:true]
+
+                [TargetDistance:1000]
+
+                [MinCooldownMs:5000]
+                [MaxCooldownMs:5001]
+
+                [MaxActions:1]
+                [Actions:PAR_PMC_Hampster_Cargoship_Action_PlaceCrew]
+            </Description>
+        </EntityComponent>
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMC_Hampster_Cargoship_Action_PlaceCrew</SubtypeId>
+            </Id>
+            <Description>
+                [RivalAI Action]
+
+                [AddBotsToGrid:true]
+                [BotCount:2]
+
+                [OnlySpawnBotsInPressurizedRooms:true]
+
+                [BotSpawnProfileNames:PAR_PMC_BotProfile_Crew]
+            </Description>
+        </EntityComponent>
+
+    </EntityComponents>
+</Definitions>

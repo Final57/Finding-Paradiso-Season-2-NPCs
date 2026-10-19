@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='utf-8'?>
+<DialogueBank>
+	<ChatProfileId>MSB_Chat_Default</ChatProfileId>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyed</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>From this outpost, we report the hostile contact is destroyed; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes the hostile contact is destroyed; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports the hostile contact is destroyed; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The hostile contact is destroyed; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the hostile contact is destroyed. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerHelp</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The station log records the hostile contact fell with allied help. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the hostile contact fell with allied help, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, the hostile contact fell with allied help. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report the hostile contact fell with allied help; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes the hostile contact fell with allied help; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>EnemyDestroyedwithPlayerMadeFinalShot</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Here at the foothold: the allied final shot ended the hostile contact. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The allied final shot ended the hostile contact. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the allied final shot ended the hostile contact. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the allied final shot ended the hostile contact. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the allied final shot ended the hostile contact, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>DamageByFriendlyOrNeutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Outpost control notes friendly or neutral fire struck our hull; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports friendly or neutral fire struck our hull; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: Friendly or neutral fire struck our hull. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Friendly or neutral fire struck our hull. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFire</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If hostile weapons are engaging the outpost, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, hostile weapons are engaging the outpost. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report hostile weapons are engaging the outpost; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes hostile weapons are engaging the outpost; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports hostile weapons are engaging the outpost; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireHealthLow</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The outpost hull is critically damaged. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the outpost hull is critically damaged. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the outpost hull is critically damaged. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the outpost hull is critically damaged, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, the outpost hull is critically damaged. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The watchtower reports the outpost position has been compromised; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost position has been compromised; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the outpost position has been compromised. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost position has been compromised. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the outpost position has been compromised. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Friendly</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>At the foothold, a friendly vessel is near the outpost. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report a friendly vessel is near the outpost; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes a friendly vessel is near the outpost; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports a friendly vessel is near the outpost; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A friendly vessel is near the outpost; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>PlayerNear1000Neutral</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Let the outpost record this: a neutral vessel is near the outpost. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records a neutral vessel is near the outpost. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If a neutral vessel is near the outpost, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, a neutral vessel is near the outpost. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report a neutral vessel is near the outpost; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Static_TargetIsApproaching</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The encounter target is approaching the outpost; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the encounter target is approaching the outpost. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The encounter target is approaching the outpost. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the encounter target is approaching the outpost. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the encounter target is approaching the outpost. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>From this outpost, we report the outpost all-clear is being transmitted; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes the outpost all-clear is being transmitted; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports the outpost all-clear is being transmitted; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost all-clear is being transmitted; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the outpost all-clear is being transmitted. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Sending_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The station log records the outpost is transmitting a distress signal. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the outpost is transmitting a distress signal, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, the outpost is transmitting a distress signal. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report the outpost is transmitting a distress signal; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes the outpost is transmitting a distress signal; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_SOS</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Here at the foothold: the outpost has received a distress signal. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost has received a distress signal. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the outpost has received a distress signal. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the outpost has received a distress signal. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the outpost has received a distress signal, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>AreaRestriction_Warning</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Outpost control notes a restricted area warning surrounds the outpost; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports a restricted area warning surrounds the outpost; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A restricted area warning surrounds the outpost; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: A restricted area warning surrounds the outpost. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>A restricted area warning surrounds the outpost. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>ShipLanding</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>If a ship is beginning its landing approach, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, a ship is beginning its landing approach. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report a ship is beginning its landing approach; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes a ship is beginning its landing approach; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports a ship is beginning its landing approach; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>UnderFireGoingDown</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The outpost vessel is going down under fire. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the outpost vessel is going down under fire. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the outpost vessel is going down under fire. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the outpost vessel is going down under fire, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, the outpost vessel is going down under fire. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Despawn</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The watchtower reports the outpost operation is complete and withdrawal is beginning; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost operation is complete and withdrawal is beginning; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the outpost operation is complete and withdrawal is beginning. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost operation is complete and withdrawal is beginning. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost log: withdrawal is beginning. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_AllGood</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>At the foothold, the outpost has received the all-clear. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report the outpost has received the all-clear; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Outpost control notes the outpost has received the all-clear; keep every available hand ready.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The watchtower reports the outpost has received the all-clear; keep the landing zone clear.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost has received the all-clear; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>SOS_Response_Timeout</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>Let the outpost record this: the outpost distress response window has expired. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the outpost distress response window has expired. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>If the outpost distress response window has expired, secure the site and wait for the next signal.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>At the foothold, the outpost distress response window has expired. Keep the route open behind us.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>From this outpost, we report the outpost distress response window has expired; keep the watch steady.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+	<DialogueCue>
+		<DialogueCueId>Received_Compromised</DialogueCueId>
+		<Entries>
+			<Entry>
+				<Message>The outpost has received a compromise report; home is still beyond this station, so keep it secure.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Here at the foothold: the outpost has received a compromise report. We still have a way home.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The outpost has received a compromise report. Check the perimeter before anyone relaxes.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>Let the outpost record this: the outpost has received a compromise report. Stay ready for the next contact.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+			<Entry>
+				<Message>The station log records the outpost has received a compromise report. Hold the line until the convoy is safe.</Message>
+				<AudioId />
+				<Weights>1</Weights>
+			</Entry>
+		</Entries>
+	</DialogueCue>
+</DialogueBank>

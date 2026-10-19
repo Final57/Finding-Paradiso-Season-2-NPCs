@@ -29,6 +29,30 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_LootProfile_Freighter</SubtypeId>
+            </Id>
+            <Description>
+                [MES Loot]
+
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockSmallContainer] 
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockMediumContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockModularContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockLargeContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockMediumContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
+
+                [ContainerTypes:PAR_ContainerTypes_Ammo_Gunship]
+
+                [MinBlocks:3]
+                [MaxBlocks:6]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
                 <SubtypeId>PAR_VALK_LootProfile_Outpost</SubtypeId>
             </Id>
             <Description>

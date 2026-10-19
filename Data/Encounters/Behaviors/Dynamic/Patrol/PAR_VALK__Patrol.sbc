@@ -35,7 +35,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>75</Speed>
-          <Behaviour>PAR_VALK_Patrol_Behavior</Behaviour>
+          <Behaviour>PAR_VALK__Patrol_Behavior</Behaviour>
         </Prefab>
         <Prefab SubtypeId="">
           <Position>
@@ -44,7 +44,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>75</Speed>
-          <Behaviour>PAR_VALK_Escort_Behavior</Behaviour>
+          <Behaviour>PAR_VALK__Escort_Behavior</Behaviour>
         </Prefab>
          <Prefab SubtypeId="">
           <Position>
@@ -53,7 +53,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>75</Speed>
-          <Behaviour>PAR_VALK_Escort_Behavior</Behaviour>
+          <Behaviour>PAR_VALK__Escort_Behavior</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -99,7 +99,7 @@
         [PlayerDistanceTrigger:50000]
         [PlayerDistanceTimerTrigger:30000]
 
-        [Triggers:PAR_VALK_Patrol_Trigger_SpawnSetup]
+        [Triggers:PAR_VALK__Patrol_Trigger_SpawnSetup]
 
         [TriggerGroups:MSB_Interaction_RadioCheck_TriggerGroup]
 

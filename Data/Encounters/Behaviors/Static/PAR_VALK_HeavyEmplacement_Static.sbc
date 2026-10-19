@@ -16,7 +16,7 @@
 
             [SpawnConditionsProfiles:PAR_VALK_HeavyEmplacement_Static_SpawnConditions]
             [SpawnConditionsProfiles:PAR_VALK_HeavyEmplacement_Static_SpawnConditions_Planetary]
-            [UseFirstConditionsAsPersistent:True]
+            [UseFirstConditionsAsPersistent:true]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
             [ManipulationProfiles:PAR_VALK_Manipulation_Outpost]
@@ -36,11 +36,11 @@
             <Prefab SubtypeId="[MES-VALK]Valkoran Heavy Emplacement">
                 <Position>
                     <X>0.0</X>
-                    <Y>8.0</Y>
+                    <Y>12.0</Y>
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
-                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
             </Prefab>
             <Prefab SubtypeId="[MES-VALK]Valkoran Oswald Class Emplacement">
                 <Position>
@@ -49,7 +49,7 @@
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
-                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
             </Prefab>
             <Prefab SubtypeId="[MES-VALK]Valkoran William Class Emplacement">
                 <Position>
@@ -58,7 +58,34 @@
                     <Z>0.0</Z>
                 </Position>
                 <Speed>0</Speed>
-                <Behaviour>PAR_VALK_HeavyEmplacement_Static_Behavior</Behaviour>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Heavens Piercer Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>24</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran James Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>8.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-VALK]Valkoran Steve Class">
+                <Position>
+                    <X>0.0</X>
+                    <Y>9.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_VALK_HeavyEmplacement_Behavior</Behaviour>
             </Prefab>
         </Prefabs>
     </SpawnGroup>
@@ -72,10 +99,14 @@
         </Id>
         <Description>
             [MES Spawn Conditions]
+
             [RivalAiSpawn:true]
-            [PrefabSpawningMode:Random]
             [RivalAiAnySpawn:true]
+
+            [PrefabSpawningMode:Random]
+
             [FactionOwner:VALK]
+
             [ForceStaticGrid:true]
         </Description>
     </EntityComponent>
@@ -89,8 +120,12 @@
             [MES Spawn Conditions]
     
             [PlanetaryInstallation:true]
-            [PlanetaryInstallationChance:1]
-            [PlanetaryInstallationType:Medium]
+            [PlanetaryInstallationChance:0]
+            [PlanetaryInstallationType:Large]
+
+            [PrefabSpawningMode:Random]
+
+            [FactionOwner:VALK]
         </Description>
     </EntityComponent>
 
@@ -105,15 +140,16 @@
             [BehaviorName:Passive]
 
             [TargetData:MSB_TargetProfile_LongRange]
+            [DialogueBanks:PAR_VALK_DialogueBank_Static.xml]
 
             [UsePlayerDistanceTimer:true]
             [PlayerDistanceTrigger:50000]
             [PlayerDistanceTimerTrigger:30000]
 
             [TriggerGroups:MSB_StaticCommon_TriggerGroup]
-            [TriggerGroups:MSB_System_Dialogue_Dynamic]
-            [TriggerGroups:MSB_System_EngagementRange_Trigger_5000]
-            [TriggerGroups:MSB_System_Defense_Trigger_Guards_7500]
+            [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Static]
+            [Triggers:MSB_System_EngagementRange_Trigger_5000]
+            [TriggerGroups:MSB_System_Defense_Trigger_Guards_PAR_VALK_Fumblebee_Guard 5000]
             [TriggerGroups:MSB_System_Communication_TriggerGroup]
             [TriggerGroups:MSB_EnvironmentSystem_TriggerGroup_SkinReplacement]
             

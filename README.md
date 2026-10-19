@@ -7,4 +7,6 @@ Also Dependant on MES, and MSB.
 
 ## Thanks to the Contributors;
 
-Lucian, Alien, Scarlett.
+Lucian, Alien, Rush.
+
+Special Thanks to Enenra for MES and MSB support, and the MES discord for putting up with my long messages.

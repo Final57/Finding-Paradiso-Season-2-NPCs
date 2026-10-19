@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityComponents>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMG_LootProfile_Silo</SubtypeId>
+            </Id>
+            <Description>
+                [MES Loot]
+
+                [ContainerBlockTypes:MyObjectBuilder_CargoContainer/(null)]
+
+                [ContainerTypes:PAR_PMG_ContainerTypes_Silo]
+
+                [MinBlocks:2]
+                [MaxBlocks:4]
+            </Description>
+        </EntityComponent>
+
+    </EntityComponents>
+</Definitions>

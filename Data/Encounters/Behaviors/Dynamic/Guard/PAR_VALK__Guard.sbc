@@ -15,7 +15,7 @@
             [SpawnConditionsProfiles:PAR_VALK__Guard_SpawnConditions]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
-            [ManipulationProfiles:PAR_VALK_Fighter]
+            [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
 
             [UseRandomNameGenerator:true]
             [RenameGrid:false]

@@ -54,13 +54,57 @@
 
                 [UseLootProfiles:true]
                 [LootProfiles:PAR_VALK_LootProfile_Fighter]
-
-                [UseBlockReplacerProfile:true]
-                [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
-                [NpcAtmoThrustForceMultiply:1.5]
             </Description>
         </EntityComponent>
 
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation_Freighter</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseLootProfiles:true]
+                [LootProfiles:PAR_VALK_LootProfile_Freighter]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation_Hydrogen</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseBlockReplacerProfile:true]
+                [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
+                [ConfigureSpecialNpcThrusters:true]
+                [NpcHydroThrustPowerMultiply:0.01]
+                [NpcHydroThrustForceMultiply:1.5]
+
+                [RestrictNpcHydroThrust:true]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_VALK_Manipulation_Atmo</SubtypeId>
+            </Id>
+            <Description>
+                [MES Manipulation]
+
+                [UseBlockReplacerProfile:true]
+                [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
+                [ConfigureSpecialNpcThrusters:true]
+                [NpcAtmoThrustPowerMultiply:0.01]
+                [NpcAtmoThrustForceMultiply:10]
+
+                [RestrictNpcAtmoThrust:true]
+            </Description>
+        </EntityComponent>
 
     </EntityComponents>
 </Definitions>

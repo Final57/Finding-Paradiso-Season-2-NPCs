@@ -21,6 +21,8 @@
 
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
+                [ReplenishSystems:true]
+
                 [UseRandomNameGenerator:true]
                 [RandomGridNamePattern:PMC Surveyor RandomLetterRandomNumber]
                 [RenameGrid:true]
@@ -36,7 +38,7 @@
                         <Y>0.0</Y>
                         <Z>0.0</Z>
                     </Position>
-                    <Speed>50</Speed>
+                    <Speed>35</Speed>
                     <Behaviour>PAR_PMC_Pinniped_Scout_Behavior</Behaviour>
                 </Prefab>
             </Prefabs>
@@ -57,8 +59,7 @@
                 [AtmosphericCargoShip:true]
 
                 [RivalAiAnySpawn:true]
-                [FactionOwner:VALK]
-                [ReplenishSystems:true]
+                [FactionOwner:PMC]
 
                 [SkipVoxelSpawnChecks:true]
                 [IgnoreCombatPhase:true]
@@ -67,19 +68,13 @@
                 [CustomPathStartAltitude:4]
                 [CargoShipTerrainPath:true]
 
-                [AtmosphericCargoShipChance:70]
-                [GravityCargoShipChance:70]
+                [AtmosphericCargoShipChance:80]
+                [GravityCargoShipChance:80]
 
                 [UseKnownPlayerLocations:true]
                 [KnownPlayerLocationMustMatchFaction:true]
                 [KnownPlayerLocationMustBeInside:false]
             </Description>
-            <Icon>Textures\GUI\Icons\Fake.dds</Icon>
-            <SizeX>1</SizeX>
-            <SizeY>1</SizeY>
-            <SizeZ>1</SizeZ>
-            <CanStack>true</CanStack>
-            <PhysicalContent>false</PhysicalContent>
         </EntityComponent>
 
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -94,24 +89,22 @@
                 [TargetData:MSB_TargetProfile_LowRange]
                 [OverrideTargetData:MSB_TargetProfile_LongRange]
                 [AutopilotData:MSB_Scout_Autopilot]
-                [SecondaryAutopilotData:MSB_Fighter_Autopilot]
+                [SecondaryAutopilotData:PAR_PMC_Autopilot_Rover]
 
-                [DialogueBanks:PAR_PMC_Pinniped_Scout_DialogueBank.xml]
+                [DialogueBanks:PAR_PMC_DialogueBank_Dynamic.xml]
 
                 [UsePlayerDistanceTimer:true]
                 [PlayerDistanceTrigger:50000] 
                 [PlayerDistanceTimerTrigger:30000]
 
-                [Triggers:PAR_PMC_Pinniped_Scout_Trigger_SpawnSpaceRelay]
                 [Triggers:PAR_PMC_Pinniped_Scout_Trigger_SpawnGravityRelay]
 
                 [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 
                 [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
                 [TriggerGroups:MSB_System_Communication_TriggerGroup]
-                [//TriggerGroups:MSB_System_Crash_TriggerGroup]
 
-                [TriggerGroups:MSB_Fighter_TriggerGroup]
+                [TriggerGroups:MSB_Rover_TriggerGroup]
                 [TriggerGroups:MSB_Scout_TriggerGroup]
                 [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
             </Description>
@@ -163,7 +156,7 @@
                 [IgnoreSafetyChecks:false]
 
                 [MaxSpawns:1]
-                [SpawnGroups:PAR_VALK_Outpost_Static_SpawnGroup]
+                [SpawnGroups:PAR_PMC_Outpost_Static_SpawnGroup]
 
                 [MinDistance:5000]
                 [MaxDistance:10000]
@@ -208,7 +201,7 @@
 
                 [OnlySpawnBotsInPressurizedRooms:true]
 
-                [BotSpawnProfileNames:PAR_VALK_BotProfile_Crew]
+                [BotSpawnProfileNames:PAR_PMC_BotProfile_Crew]
             </Description>
         </EntityComponent>
 

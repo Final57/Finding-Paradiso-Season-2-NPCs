@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+        <Id>
+            <TypeId>SpawnGroupDefinition</TypeId>
+            <SubtypeId>PAR_PMG_Tower_Static_SpawnGroup</SubtypeId>
+        </Id>
+        <Description>
+            [Modular Encounters SpawnGroup]
+
+            [UseRivalAi:true]
+            [RivalAiReplaceRemoteControl:true]
+            [ReplenishSystems:true]
+
+            [SpawnConditionsProfiles:PAR_PMG_Tower_Static_SpawnConditions]
+            [SpawnConditionsProfiles:PAR_PMG_Tower_Static_SpawnConditions_Planetary]
+            [UseFirstConditionsAsPersistent:True]
+            
+            [ManipulationProfiles:PAR_PMG_Manipulation]
+
+            [ManipulationProfiles:MSB_Manipulation_WearAndTear_Heavy_Chance]
+
+            [UseRandomNameGenerator:true]
+            [RandomGridNamePattern:Tower RandomNumberRandomNumberRandomNumber-RandomLetterRandomLetterRandomNumber]
+            [ProcessBlocksForCustomGridName:true]
+        </Description>
+        <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+        <IsPirate>true</IsPirate>
+        <Frequency>5.0</Frequency>
+        <Prefabs>
+            <Prefab SubtypeId="[MES-PMG] Tower A">
+                <Position>
+                    <X>0.0</X>
+                    <Y>9.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_Tower_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-PMG] Tower B">
+                <Position>
+                    <X>0.0</X>
+                    <Y>9.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_Tower_Static_Behavior</Behaviour>
+            </Prefab>
+            <Prefab SubtypeId="[MES-PMG] Tower C">
+                <Position>
+                    <X>0.0</X>
+                    <Y>9.0</Y>
+                    <Z>0.0</Z>
+                </Position>
+                <Speed>0</Speed>
+                <Behaviour>PAR_PMG_Tower_Static_Behavior</Behaviour>
+            </Prefab>
+        </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Tower_Static_SpawnConditions</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+
+            [RivalAiSpawn:true]
+            [RivalAiAnySpawn:true]
+
+            [FactionOwner:PMG]
+            [ForceStaticGrid:true]
+
+            [PrefabSpawningMode:Random]
+        </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Tower_Static_SpawnConditions_Planetary</SubtypeId>
+        </Id>
+        <Description>
+            [MES Spawn Conditions]
+    
+            [PlanetaryInstallation:true]
+            [PlanetaryInstallationChance:10]
+            [PlanetaryInstallationType:Small]
+
+            [PrefabSpawningMode:Random]
+
+            [FactionOwner:PMG]
+        </Description>
+    </EntityComponent>
+
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <Id>
+            <TypeId>Inventory</TypeId>
+            <SubtypeId>PAR_PMG_Tower_Static_Behavior</SubtypeId>
+        </Id>
+        <Description>
+            [RivalAI Behavior]
+
+            [BehaviorName:Passive]
+
+            [TargetData:MSB_TargetProfile_LongRange]
+
+            [TriggerGroups:MSB_StaticCommon_TriggerGroup]
+        </Description>
+    </EntityComponent>
+  </EntityComponents>
+
+</Definitions>

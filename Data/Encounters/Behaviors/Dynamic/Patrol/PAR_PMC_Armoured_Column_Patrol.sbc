@@ -1,0 +1,206 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:PAR_PMC_Armoured_Column_Patrol_SpawnConditions]
+
+        [ManipulationProfiles:PAR_PMC_Manipulation]
+        [ManipulationProfiles:PAR_PMC_Manipulation_Fighter]
+        [ManipulationProfiles:PAR_PMC_Manipulation_Hover_Rover]
+
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:PMC Armoured Column RandomLetterRandomNumber]
+        [RenameGrid:true]
+        [ProcessBlocksForCustomGridName:true]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-PMC] Badger Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>PAR_PMC_Armoured_Column_Patrol_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiAnySpawn:true]
+        [FactionOwner:PMC]
+
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+
+        [AtmosphericCargoShipChance:60]
+        [GravityCargoShipChance:60]
+
+        [CustomPathStartAltitude:4]
+        [CargoShipTerrainPath:true]
+
+        [MinAngleFromPlanetCenterDirection:-1]
+        [MaxAngleFromPlanetCenterDirection:5]
+
+        [SkipVoxelSpawnChecks:false]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:CargoShip]
+
+        [TargetData:MSB_TargetProfile_LowRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:PAR_PMC_Autopilot_Rover]
+        [SecondaryAutopilotData:PAR_PMC_Autopilot_Tank]
+
+        [DialogueBanks:PAR_PMC_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_PMC_Armoured_Column_Patrol_Trigger_SpawnSetup]
+        [Triggers:PAR_PMC_Armoured_Column_Patrol_Trigger_Escorts]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_Simple]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+        [TriggerGroups:MSB_Cargoship_TriggerGroup]
+        [TriggerGroups:MSB_Rover_TriggerGroup]
+
+        [EscortOffsets:X:10 Y:40 Z:3]
+        [EscortOffsets:X:0 Y:80 Z:3]
+        [EscortOffsets:X:-10 Y:120 Z:3]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+        [Actions:PAR_PMC_Armoured_Column_Patrol_Action_SpawnSetup]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_Action_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_Trigger_Escorts</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [MinCooldownMs:1000]
+        [MaxCooldownMs:3000]
+
+        [MaxActions:2]
+        [Actions:PAR_PMC_Armoured_Column_Patrol_Spawn_Escort_Action]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Patrol_Spawn_Escort_Action</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SpawnEncounter:true]
+        [Spawner:PAR_PMC_Armoured_Column_Escort_SpawnContainer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_PMC_Armoured_Column_Escort_SpawnContainer</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:True]
+
+        [StartsReady:True]
+        [MaxSpawns:2]
+
+        [InheritNpcAltitude:true]
+
+        [SpawnGroups:PAR_PMC_Badger_Escort_SpawnGroup]
+
+        [UseRelativeSpawnPosition:false]
+        [MinDistance:25]
+        [MaxDistance:100]
+        [MinAltitude:4]
+        [MaxAltitude:15]
+        [IgnoreSafetyChecks:false]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>
