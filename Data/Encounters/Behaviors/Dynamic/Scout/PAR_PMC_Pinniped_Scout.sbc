@@ -156,7 +156,7 @@
                 [IgnoreSafetyChecks:false]
 
                 [MaxSpawns:1]
-                [SpawnGroups:PAR_PMC_Outpost_Static_SpawnGroup]
+                [SpawnGroups:PAR_PMC_Tower_Static_SpawnGroup]
 
                 [MinDistance:5000]
                 [MaxDistance:10000]

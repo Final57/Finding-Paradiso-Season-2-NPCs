@@ -20,6 +20,7 @@
             [SpawnConditionsProfiles:PAR_VALK_Fumblebee_Guard_SpawnConditions]
 
             [ManipulationProfiles:PAR_VALK_Manipulation]
+            [ManipulationProfiles:PAR_VALK_Manipulation_Atmo]
             [ManipulationProfiles:PAR_VALK_Manipulation_AtmoGunship]
         </Description>
         <Icon>Textures\GUI\Icons\Fake.dds</Icon>
@@ -80,10 +81,6 @@
             [AutopilotData:MSB_PatrolArea_Autopilot]
 
             [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
-
-            [UsePlayerDistanceTimer:true]
-            [PlayerDistanceTrigger:50000]
-            [PlayerDistanceTimerTrigger:30000]
 
             [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 

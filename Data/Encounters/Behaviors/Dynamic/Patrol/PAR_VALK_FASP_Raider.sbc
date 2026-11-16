@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>PAR_VALK_FASP_Raider_SpawnGroup</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ReplenishSystems:true]
+        [ReplenishProfile:PAR_VALK_Replenishment_Light_Guns]
+
+        [UseRandomNameGenerator:true]
+        [RenameGrid:true]
+        [RandomGridNamePattern:Expedition CAP RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
+        [ProcessBlocksForCustomGridName:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [SpawnConditionsProfiles:PAR_VALK_FASP_Raider_SpawnConditions]
+
+        [ManipulationProfiles:PAR_VALK_Manipulation]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+        [ManipulationProfiles:PAR_VALK_Manipulation_Hydrogen]
+        [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[MES-VALK]Valkoran FASP Class">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>75</Speed>
+          <Behaviour>PAR_VALK_FASP_Raider_Behavior</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_FASP_Raider_SpawnConditions</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [RivalAiSpawn:true]
+        [RivalAiAnySpawn:true]
+        [FactionOwner:VALK]
+
+        [SkipVoxelSpawnChecks:true]
+        [SkipGridSpawnChecks:true]
+        [IgnoreCombatPhase:true]
+        [SkipAirDensityCheck:true]
+
+        [UseKnownPlayerLocations:true]
+        [KnownPlayerLocationMustMatchFaction:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:15000]
+        [ThreatIncludeOtherNpcOwners:false]
+        [ThreatScoreMinimum:50]
+        [ThreatScoreMaximum:100]
+
+        [AtmosphericCargoShip:false]
+        [GravityCargoShip:false]
+        [SpaceCargoShip:true]
+        [LunarCargoShip:true]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_FASP_Raider_Behavior</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+
+        [BehaviorName:Patrol]
+
+        [TargetData:MSB_TargetProfile_LongRange]
+        [OverrideTargetData:MSB_TargetProfile_LongRange]
+        [AutopilotData:MSB_PatrolArea_Autopilot]
+        [SecondaryAutopilotData:MSB_Fighter_Autopilot]
+
+        [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
+
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTrigger:50000]
+        [PlayerDistanceTimerTrigger:30000]
+
+        [Triggers:PAR_VALK_FASP_Raider_Trigger_SpawnSetup]
+
+        [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
+        [TriggerGroups:MSB_System_CommandChain_Leader_TriggerGroup]
+
+        [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
+        [TriggerGroups:MSB_System_Despawn_TriggerGroup_FlyToHomebase]
+        [TriggerGroups:MSB_System_Communication_TriggerGroup]
+        [Triggers:MSB_System_EngagementRange_Trigger_3000]
+
+        [TriggerGroups:MSB_PatrolArea_TriggerGroup]
+        [TriggerGroups:MSB_Fighter_TriggerGroup]
+
+        [EscortOffsets:X:50 Y:-25 Z:0]
+        [EscortOffsets:X:-50 Y:-25 Z:0]
+
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>PAR_VALK_FASP_Raider_Trigger_SpawnSetup</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [Type:Timer]
+
+        [UseTrigger:true]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:MSB_System_Communication_Action_Enable_SOS_Response_Dynamic]
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

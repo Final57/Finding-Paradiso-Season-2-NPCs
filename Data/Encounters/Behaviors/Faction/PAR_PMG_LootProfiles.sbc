@@ -5,17 +5,46 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_PMG_LootProfile_Silo</SubtypeId>
+                <SubtypeId>PAR_PMG_LootProfile_Container</SubtypeId>
+            </Id>
+            <Description>
+                [MES Loot]
+
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/Freight1]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/Freight2]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/Freight3]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeBarrelThree]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeBarrel]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeBarrelStack]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeStorageBin1]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeStorageBin2]
+                [ContainerBlockTypes:MyObjectBuilder_CubeBlock/LargeStorageBin3]
+                [ContainerBlockTypes:MyObjectBuilder_TerminalBlock/LargeCrate]
+
+                [ContainerTypes:PAR_PMG_ContainerTypes_Components]
+                [ContainerTypes:PAR_PMG_ContainerTypes_Ammo]
+
+                [MinBlocks:1]
+                [MaxBlocks:3]
+            </Description>
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>PAR_PMG_LootProfile_Container_Bottles</SubtypeId>
             </Id>
             <Description>
                 [MES Loot]
 
                 [ContainerBlockTypes:MyObjectBuilder_CargoContainer/(null)]
+                [ContainerBlockTypes:MyObjectBuilder_OxygenGenerator/(null)]
+                [ContainerBlockTypes:MyObjectBuilder_OxygenTank/(null)]
 
-                [ContainerTypes:PAR_PMG_ContainerTypes_Silo]
+                [ContainerTypes:PAR_PMG_ContainerTypes_Bottles]
 
-                [MinBlocks:2]
-                [MaxBlocks:4]
+                [MinBlocks:1]
+                [MaxBlocks:3]
             </Description>
         </EntityComponent>
 

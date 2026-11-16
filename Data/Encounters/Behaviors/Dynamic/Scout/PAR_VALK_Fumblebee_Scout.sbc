@@ -5,7 +5,7 @@
         <SpawnGroup>
             <Id>
                 <TypeId>SpawnGroupDefinition</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawngroup</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Spawngroup</SubtypeId>
             </Id>
             <Description>
                 [Modular Encounters SpawnGroup]
@@ -13,17 +13,17 @@
                 [UseRivalAi:true]
                 [RivalAiReplaceRemoteControl:true]
 
-                [SpawnConditionsProfiles:PAR_VALK__Scout_SpawnConditions]
+                [SpawnConditionsProfiles:PAR_VALK_Fumblebee_Scout_SpawnConditions]
 
                 [ManipulationProfiles:PAR_VALK_Manipulation]
                 [ManipulationProfiles:PAR_VALK_Manipulation_Fighter]
+                [ManipulationProfiles:PAR_VALK_Manipulation_Atmo]
 
                 [ManipulationProfiles:MSB_Manipulation_WearAndTear_Light_Chance]
 
-                [ReplenishSystems:false]
+                [ReplenishSystems:true]
 
                 [UseRandomNameGenerator:true]
-                [RenameGrid:true]
                 [ProcessBlocksForCustomGridName:true]
                 [RandomGridNamePattern:Scout RandomLetterRandomNumberRandomLetter-RandomNumberRandomNumber]
             </Description>
@@ -31,14 +31,14 @@
             <IsPirate>true</IsPirate>
             <Frequency>5.0</Frequency>
             <Prefabs>
-                <Prefab SubtypeId="PAR_VALK__Scout">
+                <Prefab SubtypeId="[MES-VALK]Valkoran Fumblebee Class">
                     <Position>
                         <X>0.0</X>
                         <Y>0.0</Y>
                         <Z>0.0</Z>
                     </Position>
                     <Speed>50</Speed>
-                    <Behaviour>PAR_VALK__Scout_Behavior</Behaviour>
+                    <Behaviour>PAR_VALK_Fumblebee_Scout_Behavior</Behaviour>
                 </Prefab>
             </Prefabs>
         </SpawnGroup>
@@ -49,14 +49,11 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_SpawnConditions</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_SpawnConditions</SubtypeId>
             </Id>
             <Description>
                 [MES Spawn Conditions]
 
-                [SpaceCargoShip:true]
-                [GravityCargoShip:true]
-                [LunarCargoShip:true]
                 [AtmosphericCargoShip:true]
 
                 [RivalAiAnySpawn:true]
@@ -64,13 +61,8 @@
 
                 [IgnoreCombatPhase:true]
                 [SkipAirDensityCheck:true]
-                [SkipVoxelSpawnChecks:true]
-                [SkipGridSpawnChecks:true]
 
-                [SpaceCargoShipChance:70]
-                [LunarCargoShipChance:70]
                 [AtmosphericCargoShipChance:70]
-                [GravityCargoShipChance:70]
 
                 [UseKnownPlayerLocations:true]
                 [KnownPlayerLocationMustMatchFaction:true]
@@ -86,7 +78,7 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Behavior</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Behavior</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Behavior]
@@ -95,22 +87,21 @@
                 [TargetData:MSB_TargetProfile_LowRange]
                 [OverrideTargetData:MSB_TargetProfile_LongRange]
                 [AutopilotData:MSB_Scout_Autopilot]
-                [SecondaryAutopilotData:MSB_Gunship_Autopilot]
+                [SecondaryAutopilotData:PAR_VALK_Autopilot_Helicopter]
 
                 [DialogueBanks:PAR_VALK_DialogueBank_Dynamic.xml]
 
                 [UsePlayerDistanceTimer:true]
-                [PlayerDistanceTrigger:50000] 
-                [PlayerDistanceTimerTrigger:30000]
+                [PlayerDistanceTrigger:5000] 
+                [PlayerDistanceTimerTrigger:3000]
 
-                [Triggers:PAR_VALK__Scout_Trigger_SpawnSpaceRelay]
-                [Triggers:PAR_VALK__Scout_Trigger_SpawnGravityRelay]
+                [Triggers:PAR_VALK_Fumblebee_Scout_Trigger_SpawnGravityRelay]
+                [Triggers:PAR_VALK_Fumblebee_Scout_Trigger_SpawnSetup]
 
                 [TriggerGroups:MSB_System_Dialogue_TriggerGroup_Dynamic]
 
                 [TriggerGroups:MSB_DynamicCommon_TriggerGroup]
                 [TriggerGroups:MSB_System_Communication_TriggerGroup]
-                [//TriggerGroups:MSB_System_Crash_TriggerGroup]
 
                 [TriggerGroups:MSB_Gunship_TriggerGroup]
                 [TriggerGroups:MSB_Scout_TriggerGroup]
@@ -118,62 +109,41 @@
             </Description>
         </EntityComponent>
 
+
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_SpawnSpaceRelay</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Trigger_SpawnSetup</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Trigger]
 
-                [Type:Manual]
-                [Tags:MSB_TriggerEvent_Scout_SpawnRelay_Space]
-                
+                [Type:Timer]
+
                 [UseTrigger:true]
                 [StartsReady:true]
+
                 [MaxActions:1]
-                [Actions:PAR_VALK__Scout_Action_SpawnSpaceRelay]
+                [Actions:PAR_VALK_Fumblebee_Scout_Action_SpawnSetup]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Action_SpawnSpaceRelay</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Action_SpawnSetup</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Action]
 
-                [SpawnEncounter:true]
-                [Spawner:PAR_VALK__Scout_Spawn_SpawnSpaceRelay]
+                [ChangeAntennaRanges:true]
+                [AntennaRangeChangeAmount:15000]
+                [AntennaNamesForRangeChange:]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawn_SpawnSpaceRelay</SubtypeId>
-            </Id>
-            <Description>
-                [RivalAI Spawn]
-
-                [UseSpawn:true]
-                [StartsReady:true]
-
-                [SpawningType:CustomSpawn]
-                [UseRelativeSpawnPosition:false]
-                [IgnoreSafetyChecks:false]
-
-                [MaxSpawns:1]
-                [SpawnGroups:PAR_ODIN_CommunicationsSatellite_Relay_SpawnGroup]
-
-                [MinDistance:5000]
-                [MaxDistance:7500]
-            </Description>
-        </EntityComponent>
-
-        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-            <Id>
-                <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_SpawnGravityRelay</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Trigger_SpawnGravityRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Trigger]
@@ -185,25 +155,25 @@
                 [StartsReady:true]
 
                 [MaxActions:1]
-                [Actions:PAR_VALK__Scout_Action_SpawnGravityRelay]
+                [Actions:PAR_VALK_Fumblebee_Scout_Action_SpawnGravityRelay]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Action_SpawnGravityRelay</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Action_SpawnGravityRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Action]
 
                 [SpawnEncounter:true]
-                [Spawner:PAR_VALK__Scout_Spawn_SpawnGravityRelay]
+                [Spawner:PAR_VALK_Fumblebee_Scout_Spawn_SpawnGravityRelay]
             </Description>
         </EntityComponent>
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Spawn_SpawnGravityRelay</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Spawn_SpawnGravityRelay</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Spawn]
@@ -229,7 +199,7 @@
         <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
             <Id>
                 <TypeId>Inventory</TypeId>
-                <SubtypeId>PAR_VALK__Scout_Trigger_PlaceCrew</SubtypeId>
+                <SubtypeId>PAR_VALK_Fumblebee_Scout_Trigger_PlaceCrew</SubtypeId>
             </Id>
             <Description>
                 [RivalAI Trigger]
@@ -257,7 +227,7 @@
                 [RivalAI Action]
 
                 [AddBotsToGrid:true]
-                [BotCount:2]
+                [BotCount:1]
 
                 [OnlySpawnBotsInPressurizedRooms:true]
 

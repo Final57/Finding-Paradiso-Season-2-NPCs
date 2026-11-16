@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityComponents>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_Ores</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="100" AmountMax="500">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>EnergyAmmoMagazine</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_Ingots</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="100" AmountMax="500">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>EnergyAmmoMagazine</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_Components</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="100" AmountMax="500">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>EnergyAmmoMagazine</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_HandAmmo</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="5" AmountMax="25">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.4</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>FullAutoPistolMagazine</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.2</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>ElitePistolMagazine</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.2</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.2</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.2</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="0" AmountMax="10">
+                    <Frequency>0.2</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_PDCAmmo</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="5" AmountMax="25">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>NATO_25x184mm</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="5" AmountMax="25">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>NATO_25x184mm</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+        <ContainerType CountMin="0" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>PAR_PMG_ContainerTypes_Bottles</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="0" AmountMax="2">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>AmmoMagazine</TypeId>
+                        <SubtypeId>EnergyAmmoMagazine</SubtypeId>
+                    </Id>
+                </Item>
+            </Items>
+        </ContainerType>
+
+    </EntityComponents>
+</Definitions>
